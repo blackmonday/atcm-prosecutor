@@ -1,0 +1,28 @@
+{% extends "layout-CPP.html" %}
+
+{% block page_title %}
+    GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+    <div class="grid-row">
+        <div class="column-two-thirds">
+
+            <h1 class="heading-xlarge">
+                ATCM Prosecutor - defendants details updated
+                <span class="heading-secondary">{{releaseVersion}}</span>
+            </h1>{{releaseVersion | log }}
+            
+            <p>This design demo is intended for user testing when a defendants details have been updated.</p>
+
+            <a href="/prosecutor/dashboard">Let's get started</a>
+
+        </div>
+    </div>
+</main>
+
+{% endblock %}
+
+

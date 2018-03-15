@@ -1,0 +1,79 @@
+{% extends "layout-CPP.html" %}
+
+{% block page_title %}
+    GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+<style>
+    tr {
+        vertical-align: top;
+    }
+</style>
+<main id="content" role="main">
+    
+    <div class="grid-row">
+        <div class="column-full">
+            <!-- Alpha phase banner -->
+            {% include "includes/phase_banner_alpha.html" %}
+            {% include "includes/breadcrumb_back.html" %}
+        </div>
+    </div>
+
+    <div class="grid-row">
+        <div class="column-two-thirds">
+
+            <h1 class="heading-xlarge top_30 bottom_30">Defendants details updated</h1>
+            
+            <div class="panel panel-border-wide">
+                <p>2 cases have been updated</p>
+            </div>
+            
+         </div>
+    </div>
+
+    <div class="grid-row">
+        <div class="column-full">
+
+           <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Reference number</th>
+                        <th scope="col">Date of birth</th>
+                        <th scope="col">What changed?</th>
+                        <th scope="col">Updated on</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row"><a href="billy-smith.html" title="View Billy Smith's cases">SMITH Billy</a></th>
+                        <td>9012466</td>
+                        <td>19 Oct 1972</td>
+                        <td>Name</td>
+                        <td>30 Feb 2018</td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><a href="camilla-jones.html" title="View Camilla Jones's case">JONES Camilla</a></th>
+                        <td>5160990</td>
+                        <td>4 Jan 1968</td>
+                        <td>Date of birth<br>Address details<br>Name</td>
+                        <td>2 Mar 2018</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <form class="form" action="" method="post">
+                <div class="form-group">
+                    <p class="top_30"><input class="button" type="submit" value="Back to home"></p>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</main>
+
+{% endblock %}
+
+

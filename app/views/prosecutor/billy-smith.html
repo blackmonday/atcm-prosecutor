@@ -1,0 +1,188 @@
+{% extends "layout-CPP.html" %}
+
+{% block page_title %}
+    GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+<style>
+    .peristant-info-banner {
+        color: #fff;
+        background-color: #005EA5;
+        height: 40px;
+        line-height: 43px;
+        vertical-align: middle;
+        display: block;
+        font-size: 16px;
+        padding-left: 10px;
+    }
+
+    tr {
+        vertical-align: top;
+    }
+</style>
+
+<main id="content" role="main">
+    
+    <div class="grid-row">
+        <div class="column-full">
+            <!-- Alpha phase banner -->
+            {% include "includes/phase_banner_alpha.html" %}
+            {% include "includes/breadcrumb_back.html" %}
+            
+            <div class="peristant-info-banner">
+                <div class="peristant-info-banner-content">9012466 <span class="bold">Billy SMITH</span></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid-row top_30">
+        <div class="column-two-thirds">
+
+            <h1 class="heading-xlarge top_0 bottom_5">Billy SMITH</h1>
+            <p class="form-hint">4 April 1970 (46 years old)</p>
+            
+            <!-- WARNING BANNER PATTERN -->
+            <div class="warning-banner-nest">
+                <div class="warning-banner">
+                    <div class="warning-banner-icon"><img src="/public/images/alert-icon-white.svg" class="warning-banner-icon"></div>
+                    <div class="warning-banner-text">
+                        <div>The following defendant details have been updated:</div>
+                        <div class="top_5">Name</div>
+                    </div>
+                </div>
+            </div>
+
+
+            
+            
+            <div class="tabGroup top_30">
+                <a id="tabA" class="tab-on" onclick="tabGroup(tabContent, 'TAB-ONE')" href="javascript: void(0)">Case details</a>
+                <a id="tabB" class="tab" onclick="tabGroup(tabContent, 'TAB-TWO')" href="javascript: void(0)">Personal details</a>
+                <a id="tabC" class="tab" onclick="tabGroup(tabContent, 'TAB-THREE')" href="javascript: void(0)">Documents</a>
+                <hr>
+            </div>
+            <div id="tabContent" class="top_30">
+                <div id="tabOneContent">
+                    <h4 class="heading-medium bottom_10">Case details</h4>
+                    <table class="top_10">
+                        <tr>
+                            <th class="bold" style="border: none">Case status</th>
+                            <td style="border: none">No plea received</td>
+                        </tr>
+                        <tr>
+                            <th class="bold" style="border: none">Prosecutor</th>
+                            <td style="border: none">Transport for London</td>
+                        </tr>
+                        <tr>
+                            <th class="bold" style="border: none">Notice served</th>
+                            <td style="border: none">28 February 2018</td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="tabTwoContent">
+                    <h4 class="heading-medium bottom_10">Personal details</h4>
+                    <table class="top_10">
+                        <tr>
+                            <th class="bold" style="border: none">Name</th>
+                            <td style="border: none">Billy SMITH</td>
+                        </tr>
+                        <tr>
+                            <th class="bold" style="border: none">Date of birth</th>
+                            <td style="border: none">4 April 1970 (46 years old)</td>
+                        </tr>
+                        <tr>
+                            <th class="bold" style="border: none">Address</th>
+                            <td style="border: none">6 Blessington Road<br>
+                            Lewisham<br>
+                            London<br>
+                            SE13 5EB</td>
+                        </tr>
+                        <tr>
+                            <th class="bold" style="border: none">Email</th>
+                            <td style="border: none">billy_s765@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <th class="bold" style="border: none">Home telephone</th>
+                            <td style="border: none"><a href="" title="">Add home telephone</a></td>
+                        </tr>
+                        <tr>
+                            <th class="bold" style="border: none">Mobile</th>
+                            <td style="border: none">07975337198</td>
+                        </tr>
+                        <tr>
+                            <th class="bold" style="border: none">National Insurance number</th>
+                            <td style="border: none">VO 12 3445 56 D</td>
+                        </tr>
+                    </table>
+                    
+                    <p class="top_15"><a href="" title="">Change personal details</a></p>
+                </div>
+                <div id="tabThreeContent">
+
+                
+                
+                
+                
+                    <h4 class="heading-medium bottom_10">Documents</h4>
+                    <table class="top_10">
+                        <tr>
+                            <th class="bold" style="border: none">Uploaded documents</th>
+                            <td style="border: none">
+                                <!-- Thumbnail - small icon -->
+                                <div class="download-file">
+                                    <img src="/public/images/Thumbnail%20icon%20-%20small.png" title="document title">
+                                    <div class="download-file-text">
+                                        <span class="font-xsmall"><a href="#">SJP notice</a></span>
+                                        <span class="font-xsmall">PDF, 157KB, 2 pages</span>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    
+                    <p class="top_15"><a href="" title="">Change personal details</a></p>
+
+                    <h4 class="heading-medium bottom_10">Online plea</h4>
+                    <p class="top_15"><a href="" title="">Defendant's online plea</a></p>
+
+                
+                
+                
+                
+                </div>
+            </div>
+            
+            <hr class="top_60 bottom_60">
+            
+            <h2 class="heading-large">Offence 1</h2>
+            <h3 class="heading-medium bottom_5">Passenger used ticket issued for another person</h3>
+            <p>On 10/06/2014 At grosvenor place SW1 Being a passenger on a Public Service Vehicle operated on behalf of London Bus Services Limited being used for the carriage of passengers at separate fares where the vehicle was being operated by a Driver without a Conductor did not immediately on boarding pay the fare to the Driver for the journey you intended to take.</p>
+            
+            <div class="top_60 bottom_60">
+                <span class="label">No plea received</span>
+            </div>
+            
+            <hr class="top_60 bottom_60">
+
+            <h3 class="heading-medium bottom_5">Statement of facts</h3>
+            <p>I, Inspector Morse, was suspicious as the defendant kept moving seats away from me. When asked for a ticket he replied “I don’t have one as I am not really on this train, you’re seeing an illusion”. I had no choice but to issue him with a ticket.</p>
+
+        </div>
+        
+        <div class="coloumn-one-third">
+            <!-- RIGHT COLUMN NAVIGATION - VARIATION FIVE -->
+            <div class="right-column-nav">
+                <hr class="bold-hr">
+                <h3 class="heading-medium">Case options</h3>
+                <p><a href="">Withdraw offence</a></p>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+{% endblock %}
+
+

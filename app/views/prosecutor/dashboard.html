@@ -1,0 +1,43 @@
+{% extends "layout-dashboard.html" %}
+
+{% block page_title %}
+  CJS CPP homepage template version two
+{% endblock %}
+
+{% block content %}
+
+{% include "includes/homepage_header_template_2.html" %}
+
+<main id="content" role="main">
+        
+    {% include "includes/phase_banner_alpha.html" %}
+
+    <div class="grid-row">
+        
+        <div class="column-two-thirds">            
+            <h2 class="heading-medium">Other tasks</h2> 
+            
+            <!-- Link one -->
+            <div style="float: left">
+                <a href="" title="" style="text-decoration: none"><span style="text-decoration: underline">Add dates to avoid or cases</span><span class="bold"> (3)</span></a>
+            </div>
+            <div>
+                <img src="/public/images/alert-icon-black.svg" style="height: 23px; padding-left: 5px">
+            </div>
+            
+            <!-- Link two -->
+            <p class="top_15"><a href="defendant-details-updated.html" title="" style="text-decoration: none"><span style="text-decoration: underline">Defendant details updated</span><span class="bold"> (2)</span></a></p>
+            
+            <!-- Link three -->
+            <p><a href="" title="">Withdraw an offence</a></p>
+            
+            <!-- Link four -->
+            <p><a href="" title="">Export case results by date</a></p>
+            
+        </div>
+        
+    </div>
+    
+</main>
+
+{% endblock %}
