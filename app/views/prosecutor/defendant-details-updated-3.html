@@ -1,0 +1,342 @@
+{% extends "layout-CPP.html" %}
+
+{% block page_title %}
+    GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+<style>
+    tr {
+        vertical-align: top;
+    }
+    table th, table td {
+        font-size: 16px;
+    }
+</style>
+<main id="content" role="main">
+    
+    <div class="grid-row">
+        <div class="column-full">
+            <!-- Alpha phase banner -->
+            {% include "includes/phase_banner_alpha.html" %}
+            {% include "includes/breadcrumb_back.html" %}
+        </div>
+    </div>
+
+    <div class="grid-row">
+        <div class="column-two-thirds">
+
+            <h1 class="heading-xlarge top_30 bottom_30">Defendants details updated</h1>
+            
+            <div class="panel panel-border-wide">
+                <p>32 cases have been updated</p>
+            </div>
+            
+         </div>
+    </div>
+
+    <div class="grid-row">
+        <div class="column-full">
+
+           <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Reference number</th>
+                        <th scope="col">Date of birth</th>
+                        <th scope="col">What changed?</th>
+                        <th scope="col">Updated on</th>
+                        <th scope="col">Remove</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row"><a href="billy-smith.html" title="View cases">SMITH Billy</a></th>
+                        <td>9012466</td>
+                        <td>19 Oct 1972</td>
+                        <td>Name</td>
+                        <td>16 Mar 2018</td>
+                        <td><a href="" title="Remove case from this list">Remove</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><a href="camilla-jones.html" title="View case">JONES Camilla</a></th>
+                        <td>5160990</td>
+                        <td>4 Jan 1968</td>
+                        <td>Date of birth<br>Address details<br>Name</td>
+                        <td>16 Mar 2018</td>
+                        <td><a href="" title="Remove case from this list">Remove</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><a href="billy-smith.html" title="View cases">GREENBERG David</a></th>
+                        <td>0941426</td>
+                        <td>4 Mar 1952</td>
+                        <td>Name</td>
+                        <td>12 Mar 2018</td>
+                        <td><a href="" title="Remove case from this list">Remove</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><a href="camilla-jones.html" title="View case">BABALOLA Demi</a></th>
+                        <td>0987695</td>
+                        <td>18 Oct 1952</td>
+                        <td>Name</td>
+                        <td>2 Mar 2018</td>
+                        <td><a href="" title="Remove case from this list">Remove</a></td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row"><a href="billy-smith.html" title="View cases">DUFFIN Daniel</a></th>
+                        <td>6440445</td>
+                        <td>19 Oct 1972</td>
+                        <td>Name</td>
+                        <td>30 Feb 2018</td>
+                        <td><a href="" title="Remove case from this list">Remove</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><a href="camilla-jones.html" title="View case">GRANT Robert</a></th>
+                        <td>9503459</td>
+                        <td>23 Nov 1987</td>
+                        <td>Address details</td>
+                        <td>28 Feb 2018</td>
+                        <td><a href="" title="Remove case from this list">Remove</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><a href="billy-smith.html" title="View cases">GOTTARDO Chris</a></th>
+                        <td>6376857</td>
+                        <td>4 Nov 1978</td>
+                        <td>Address details</td>
+                        <td>30 Feb 2018</td>
+                        <td><a href="" title="Remove case from this list">Remove</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><a href="camilla-jones.html" title="View case">LAIDLAW Andy</a></th>
+                        <td>1575939</td>
+                        <td>15 Aug 1992</td>
+                        <td>Date of birth</td>
+                        <td>30 Feb 2018</td>
+                        <td><a href="" title="Remove case from this list">Remove</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><a href="billy-smith.html" title="View cases">LAMINA Asisat</a></th>
+                        <td>1560848</td>
+                        <td>19 Oct 1972</td>
+                        <td>Name</td>
+                        <td>27 Feb 2018</td>
+                        <td><a href="" title="Remove case from this list">Remove</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><a href="camilla-jones.html" title="View case">MOONEY Patrick Michael</a></th>
+                        <td>5239275</td>
+                        <td>26 Dec 1988</td>
+                        <td>Date of birth<br>Address details</td>
+                        <td>25 Feb 2018</td>
+                        <td><a href="" title="Remove case from this list">Remove</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><a href="billy-smith.html" title="View cases">LAW Mick</a></th>
+                        <td>3382124</td>
+                        <td>12 Jun 1962</td>
+                        <td>Name</td>
+                        <td>25 Feb 2018</td>
+                        <td><a href="" title="Remove case from this list">Remove</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><a href="camilla-jones.html" title="View case">EGEE Phil</a></th>
+                        <td>6955167</td>
+                        <td>10 Sep 1968</td>
+                        <td>Name</td>
+                        <td>20 Feb 2018</td>
+                        <td><a href="" title="Remove case from this list">Remove</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><a href="billy-smith.html" title="View cases">LOEWECKE Robert</a></th>
+                        <td>4538297</td>
+                        <td>20 Sep 1990</td>
+                        <td>Name</td>
+                        <td>19 Feb 2018</td>
+                        <td><a href="" title="Remove case from this list">Remove</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><a href="camilla-jones.html" title="View case">LOCKE Nicole</a></th>
+                        <td>3228395</td>
+                        <td>14 May 1983</td>
+                        <td>Date of birth<br>Name</td>
+                        <td>19 Feb 2018</td>
+                        <td><a href="" title="Remove case from this list">Remove</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><a href="billy-smith.html" title="View cases">MATHARU Parvinder</a></th>
+                        <td>7063920</td>
+                        <td>19 Oct 1972</td>
+                        <td>Date of birth</td>
+                        <td>18 Feb 2018</td>
+                        <td><a href="" title="Remove case from this list">Remove</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><a href="camilla-jones.html" title="View case">STRATHDEE Jason</a></th>
+                        <td>0851237</td>
+                        <td>6 Apr 1954</td>
+                        <td>Date of birth</td>
+                        <td>8 Feb 2018</td>
+                        <td><a href="" title="Remove case from this list">Remove</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><a href="billy-smith.html" title="View cases">TAMLYN Martin</a></th>
+                        <td>5781957</td>
+                        <td>8 Mar 1966</td>
+                        <td>Address details</td>
+                        <td>7 Feb 2018</td>
+                        <td><a href="" title="Remove case from this list">Remove</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><a href="camilla-jones.html" title="View case">TILOTSON Sarah</a></th>
+                        <td>1648335</td>
+                        <td>4 Feb 1953</td>
+                        <td>Address details<br>Name</td>
+                        <td>6 Feb 2018</td>
+                        <td><a href="" title="Remove case from this list">Remove</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><a href="billy-smith.html" title="View cases">WARREN Maria</a></th>
+                        <td>8482622</td>
+                        <td>12 Nov 1984</td>
+                        <td>Name</td>
+                        <td>4 Feb 2018</td>
+                        <td><a href="" title="Remove case from this list">Remove</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><a href="camilla-jones.html" title="View case">WADE Tom</a></th>
+                        <td>7158446</td>
+                        <td>21 Aug 1996</td>
+                        <td>Address details</td>
+                        <td>3 Feb 2018</td>
+                        <td><a href="" title="Remove case from this list">Remove</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><a href="billy-smith.html" title="View cases">WARREN Stephen</a></th>
+                        <td>9398452</td>
+                        <td>28 Nov 1956</td>
+                        <td>Address details</td>
+                        <td>30 Feb 2018</td>
+                        <td><a href="" title="Remove case from this list">Remove</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><a href="camilla-jones.html" title="View case">WEEKES Graeme</a></th>
+                        <td>7793670</td>
+                        <td>22 Nov 1974</td>
+                        <td>Address details</td>
+                        <td>2 Mar 2018</td>
+                        <td><a href="" title="Remove case from this list">Remove</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><a href="billy-smith.html" title="View cases">SASSILA Samira</a></th>
+                        <td>6059813</td>
+                        <td>3 Nov 1963</td>
+                        <td>Name</td>
+                        <td>3 Feb 2018</td>
+                        <td><a href="" title="Remove case from this list">Remove</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><a href="camilla-jones.html" title="View case">HITCHINGS Sarah</a></th>
+                        <td>2420468</td>
+                        <td>17 Dec 1990</td>
+                        <td>Date of birth<br>Address details<br>Name</td>
+                        <td>3 Feb 2018</td>
+                        <td><a href="" title="Remove case from this list">Remove</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><a href="billy-smith.html" title="View cases">WILKINS Richard</a></th>
+                        <td>0746436</td>
+                        <td>4 May 1997</td>
+                        <td>Name</td>
+                        <td>3 Feb 2018</td>
+                        <td><a href="" title="Remove case from this list">Remove</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><a href="camilla-jones.html" title="View case">TUVIANA Sali</a></th>
+                        <td>1469081</td>
+                        <td>22 Jan 1969</td>
+                        <td>Date of birth<br>Name</td>
+                        <td>1 Feb 2018</td>
+                        <td><a href="" title="Remove case from this list">Remove</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><a href="billy-smith.html" title="View cases">SEGAL Rachel</a></th>
+                        <td>1815738</td>
+                        <td>15 April 1962</td>
+                        <td>Date of birth</td>
+                        <td>31 Jan 2018</td>
+                        <td><a href="" title="Remove case from this list">Remove</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><a href="camilla-jones.html" title="View case">YUSSIF Vanessa Kubura</a></th>
+                        <td>0191412</td>
+                        <td>10 May 1985</td>
+                        <td>Date of birth</td>
+                        <td>28 Jan 2018</td>
+                        <td><a href="" title="Remove case from this list">Remove</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><a href="billy-smith.html" title="View cases">AGOLLEY Faustina</a></th>
+                        <td>3176787</td>
+                        <td>4 August 1983</td>
+                        <td>Date of birth</td>
+                        <td>27 Jan 2018</td>
+                        <td><a href="" title="Remove case from this list">Remove</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><a href="camilla-jones.html" title="View case">KHAN Yasmeen</a></th>
+                        <td>6237455</td>
+                        <td>10 April 1995</td>
+                        <td>Date of birth<br>Address details</td>
+                        <td>XX Jan 2018</td>
+                        <td><a href="" title="Remove case from this list">Remove</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><a href="billy-smith.html" title="View cases">LIU Dandan</a></th>
+                        <td>2527100</td>
+                        <td>18 Oct 1962</td>
+                        <td>Date of birth<br>Address details</td>
+                        <td>27 Jan 2018</td>
+                        <td><a href="" title="Remove case from this list">Remove</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><a href="camilla-jones.html" title="View case">SAINT Sarang</a></th>
+                        <td>5256404</td>
+                        <td>8 Jan 1968</td>
+                        <td>Date of birth</td>
+                        <td>22 Jan 2018</td>
+                        <td><a href="" title="Remove case from this list">Remove</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><a href="billy-smith.html" title="View cases">OWUSU Marcus</a></th>
+                        <td>6404525</td>
+                        <td>12 Jul 1984</td>
+                        <td>Address details</td>
+                        <td>19 Jan 2018</td>
+                        <td><a href="" title="Remove case from this list">Remove</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><a href="camilla-jones.html" title="View case">HEMING Lawrence</a></th>
+                        <td>6787317</td>
+                        <td>4 Feb 1973</td>
+                        <td>Address details</td>
+                        <td>17 Jan 2018</td>
+                        <td><a href="" title="Remove case from this list">Remove</a></td>
+                    </tr>
+               </tbody>
+            </table>
+            
+            <form class="form" action="" method="post">
+                <div class="form-group">
+                    <p class="top_30"><input class="button" type="submit" value="Back to home"></p>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</main>
+
+{% endblock %}
+
+
