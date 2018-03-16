@@ -50,3 +50,19 @@ function tabGroup(tableObj, which) {
         document.getElementById("tabThreeContent").style.display = "block";
     } 
 }
+
+
+/* ANIMATION TEST */
+$( "#btn1" ).click(function() {
+  $( "#box" ).animate({
+   width: "302px",
+    }, 1500 );
+});
+
+$( "#btn2" ).click(function() {
+  $( "#box" ).animate({
+   width: "1px",
+    }, 1500 );
+});
+
+
