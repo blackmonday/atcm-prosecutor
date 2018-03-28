@@ -16,6 +16,53 @@ $(document).ready(function () {
   // to toggle hidden content
   var showHideContent = new GOVUK.ShowHideContent()
   showHideContent.init()
+    
+    
+    
+    
+    
+    $( "#progress-bar-1" ).animate({
+        width: "100%"
+    }, 1500, function() {
+        document.getElementById("progressBar1").style.display = "none";
+        document.getElementById("uploadDate1").style.display = "table-cell";
+        document.getElementById("uploadTime1").style.display = "table-cell";
+        document.getElementById("row1cancel").style.display = "none";
+        document.getElementById("row1remove").style.display = "table-cell";
+
+    });
+
+    $( "#progress-bar-2" ).animate({
+        width: "100%"
+    }, 8000, function() {
+        document.getElementById("progressBar2").style.display = "none";
+        document.getElementById("uploadDate2").style.display = "table-cell";
+        document.getElementById("uploadTime2").style.display = "table-cell";
+        document.getElementById("row2cancel").style.display = "none";
+        document.getElementById("row2remove").style.display = "table-cell";
+    });
+
+    $( "#progress-bar-3" ).animate({
+        width: "100%",
+    }, 4000, function() {
+        document.getElementById("progressBar3").style.display = "none";
+        document.getElementById("uploadDate3").style.display = "table-cell";
+        document.getElementById("uploadTime3").style.display = "table-cell";
+        document.getElementById("row3cancel").style.display = "none";
+        document.getElementById("row3remove").style.display = "table-cell";
+    });
+
+
+
+
+
+
+
+    
+    
+    
+    
+    
 })
 
 
@@ -50,19 +97,3 @@ function tabGroup(tableObj, which) {
         document.getElementById("tabThreeContent").style.display = "block";
     } 
 }
-
-
-/* ANIMATION TEST */
-$( "#btn1" ).click(function() {
-  $( "#box" ).animate({
-   width: "302px",
-    }, 1500 );
-});
-
-$( "#btn2" ).click(function() {
-  $( "#box" ).animate({
-   width: "1px",
-    }, 1500 );
-});
-
-

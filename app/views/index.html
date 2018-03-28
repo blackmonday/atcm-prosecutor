@@ -10,14 +10,39 @@
     <div class="grid-row">
         <div class="column-two-thirds">
 
-            <h1 class="heading-xlarge">
-                ATCM Prosecutor - defendants details updated
-                <span class="heading-secondary">{{releaseVersion}}</span>
-            </h1>{{releaseVersion | log }}
+            <h1 class="bottom_15 heading-xlarge">ATCM Prosecutor design prototype</h1>
             
-            <p>This design demo is intended for user testing when a defendants details have been updated.</p>
+            <p class="top_15 bottom_0 font-xsmall form-hint">This prototype uses the GOV.UK prototype kit {{releaseVersion}}</p>
+            
+            <p class="top_60 bottom_5">This design demo currently includes:</p>
+            <ul class="list list-bullet">
+                <li>Defendants details have been updated</li>
+            </ul>
 
-            <a href="/prosecutor/dashboard">Let's get started</a>
+            <form class="form" action="" method="post">
+                <div class="form-group">
+                    
+                    <fieldset class="top_15 bottom_15">
+                        <legend>
+                            <h1 class="heading-medium bottom_10">Choose a prosecutor</h1>
+                        </legend>
+                        <div class="multiple-choice">
+                            <input id="radio-1" type="radio" name="prosecutor-group" value="TfL">
+                            <label for="radio-1">TfL</label>
+                        </div>
+                        <div class="multiple-choice">
+                            <input id="radio-2" type="radio" name="prosecutor-group" value="TV Licensing">
+                            <label for="radio-2">TV Licensing</label>
+                        </div>
+                    </fieldset>
+                    
+                    <fieldset class="top_15">
+                        <input class="button" type="submit" value="Let's get started">
+                     </fieldset>
+                   
+                </div>
+            </form>
+
 
         </div>
     </div>

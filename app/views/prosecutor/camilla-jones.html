@@ -73,7 +73,7 @@
                         </tr>
                         <tr>
                             <th class="bold" style="border: none">Prosecutor</th>
-                            <td style="border: none">Transport for London</td>
+                            <td style="border: none">{{data['prosecutor']}}</td>
                         </tr>
                         <tr>
                             <th class="bold" style="border: none">Notice served</th>
@@ -139,7 +139,7 @@
                         </tr>
                     </table>
                     
-                    <p class="top_15"><a href="" title="">Change personal details</a></p>
+                    <p class="top_15"><a href="" title="">Add documents</a></p>
 
                     <h4 class="heading-medium bottom_10">Online plea</h4>
                     <p class="top_15"><a href="" title="">Defendant's online plea</a></p>
@@ -154,8 +154,8 @@
             <hr class="top_60 bottom_60">
             
             <h2 class="heading-large">Offence 1</h2>
-            <h3 class="heading-medium bottom_5">Passenger used ticket issued for another person</h3>
-            <p>On 10/06/2014 At grosvenor place SW1 Being a passenger on a Public Service Vehicle operated on behalf of London Bus Services Limited being used for the carriage of passengers at separate fares where the vehicle was being operated by a Driver without a Conductor did not immediately on boarding pay the fare to the Driver for the journey you intended to take.</p>
+            <h3 class="heading-medium bottom_5">{{data['offence-title']}}</h3>
+            <p>{{data['offence-description']}}</p>
             
             <div class="top_60 bottom_60">
                 <span class="label">No plea received</span>

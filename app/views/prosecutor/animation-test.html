@@ -19,7 +19,8 @@
     <div class="grid-row">
         <div class="column-two-thirds">
 
-            <h1 class="heading-xlarge top_30 bottom_30">Animation test</h1>
+            <h1 class="heading-xlarge top_30 bottom_30">Uploading documents</h1>
+            <h2 class="heading-medium top_30 bottom_15">Files being uploaded</h2>
                         
          </div>
     </div>
@@ -31,48 +32,119 @@
             
             <style>
                 #container {
-                    width: 100px;
-                    height: 100px;
+                    width: 100%;
+                    height: 20px;
                     position: relative;
                 }
-                #box,
+                #progress-bar-1, #progress-bar-2, #progress-bar-3,
                 #border {
                     width: 100%;
-                    height: 100%;
+                    height:20px;
                     position: absolute;
-                    top: 0;
+                    top: -2px;
                     left: 0;
-                    height:30px;
-                    margin:6px;
                 }
-                #box {
-                    width:1px;
+                #progress-bar-1, #progress-bar-2, #progress-bar-3 {
+                    width:0;
                     position:relative;
-                    top: 7px;
-                    background:#FFBF47;
+                    top: -1px;
+                    background:#DEE0E2;
                 }
                 #border {
-                    width:300px;
+                    width:100%;
                     z-index:10;
                     position:absolute;
                     background:none;
                     border:1px solid #0B0C0C;
-                    height:30px;
+                    height:20px;
+                }
+                tr {
+                    vertical-align: top;
+                }
+                .remove-link {
+                    color: #005EA5;
+                    text-decoration: underline;
+                }
+                .remove-link:hover {
+                    color: #2B8CC4;
+                    text-decoration: underline;
+                    cursor: pointer;
                 }
             </style>
             
-            <button id="btn1">Animate height & width</button>
-            <button id="btn2">Reset</button>
-            
-            <div id="container">
-                <div id="border"></div>
-                <div id="box"></div>
-            </div>
+            <script>
+                function removeRow1() {
+                    document.getElementById("row1").style.display = "none";
+                }
+                function removeRow2() {
+                    document.getElementById("row2").style.display = "none";
+                }
+                function removeRow3() {
+                    document.getElementById("row3").style.display = "none";
+                }
+            </script>
 
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Type</th>
+                        <th scope="col">Uploaded on</th>
+                        <th scope="col">Upload time</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="row1">
+                        <th scope="row">Document one</th>
+                        <td>PDF, 56KB, 1 page</td>
+                        <td id=progressBar1 colspan="2">
+                            <div id="container" style="vertical-align: top">
+                                <div id="border"></div>
+                                <div id="progress-bar-1"></div>
+                            </div>
+                        </td>
+                        <td id="uploadDate1" style="display: none">19 March 2018</td>
+                        <td id="uploadTime1" style="display: none">10:56 am</td>
+                        <td id="row1cancel" class="remove-link">Cancel</td>
+                        <td id="row1remove" class="remove-link" onclick="removeRow1()" style="display: none">Remove</td>
+                    </tr>
+                    <tr id="row2">
+                        <th scope="row">Document two</th>
+                        <td>PDF, 356KB, 6 pages</td>
+                        <td id="progressBar2" colspan="2">
+                            <div id="container" style="vertical-align: top">
+                                <div id="border"></div>
+                                <div id="progress-bar-2"></div>
+                            </div>
+                        </td>
+                        <td id="uploadDate2" style="display: none">19 March 2018</td>
+                        <td id="uploadTime2" style="display: none">10:56 am</td>
+                        <td id="row2cancel" class="remove-link">Cancel</td>
+                        <td id="row2remove" class="remove-link" onclick="removeRow2()" style="display: none">Remove</td>
+                    </tr>
+                    <tr id="row3">
+                        <th scope="row">Document three</th>
+                        <td>PDF, 127KB, 3 pages</td>
+                        <td id="progressBar3" colspan="2">
+                            <div id="container" style="vertical-align: top">
+                                <div id="border"></div>
+                                <div id="progress-bar-3"></div>
+                            </div>
+                        </td>
+                        <td id="uploadDate3" style="display: none">19 March 2018</td>
+                        <td id="uploadTime3" style="display: none">10:56 am</td>
+                        <td id="row3cancel" class="remove-link">Cancel</td>
+                        <td id="row3remove" class="remove-link" onclick="removeRow3()" style="display: none">Remove</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <p class="top_30"><a href="">Cancel - go back to case</a></p>
 
-            
-            
         </div>
+        
+        
     </div>
 </main>
 
