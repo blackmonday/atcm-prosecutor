@@ -11,6 +11,21 @@
         vertical-align: top;
     }
 </style>
+
+<script>
+    
+    window.onload = function() {
+        
+        removeThisRow = localStorage.getItem("removeRow");
+        
+        if (removeThisRow == "True") { 
+            document.getElementById('addDatesToAvoidRow').style.display = "none"
+        }
+        
+    }
+    
+</script>
+
 <main id="content" role="main">
     
     <div class="grid-row">
@@ -52,7 +67,23 @@
                 </thead>
                 <tbody>
                     <tr>
+                        <th scope="row"><a href="dates-to-avoid.html">row 1</a></th>
+                        <td>{{data['defendent-address-line-1']}}, {{data['defendent-address-line-2']}}, {{data['defendent-address-line-3']}}, {{data['defendent-address-town-or-city']}}, {{data['defendent-address-postcode']}}</td>
+                        <td>{{data['case-reference']}}</td>
+                        <td>{{data['defendent-dob-short']}}</td>
+                        <td>{{data['plea-entry-short']}}</td>
+                    </tr>
+
+                    <tr id="addDatesToAvoidRow">
                         <th scope="row"><a href="dates-to-avoid.html">{{data['defendent-last-name']}} {{data['defendent-first-name']}}</a></th>
+                        <td>{{data['defendent-address-line-1']}}, {{data['defendent-address-line-2']}}, {{data['defendent-address-line-3']}}, {{data['defendent-address-town-or-city']}}, {{data['defendent-address-postcode']}}</td>
+                        <td>{{data['case-reference']}}</td>
+                        <td>{{data['defendent-dob-short']}}</td>
+                        <td>{{data['plea-entry-short']}}</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row"><a href="dates-to-avoid.html">row 3</a></th>
                         <td>{{data['defendent-address-line-1']}}, {{data['defendent-address-line-2']}}, {{data['defendent-address-line-3']}}, {{data['defendent-address-town-or-city']}}, {{data['defendent-address-postcode']}}</td>
                         <td>{{data['case-reference']}}</td>
                         <td>{{data['defendent-dob-short']}}</td>

@@ -15,6 +15,8 @@ module.exports = router
 router.post('/', function (req, res) {
 
     var prosecutor = req.session.data['prosecutor-group']
+    
+    req.session.data['addDatesToAvoidCount'] = "3"
 
     if (prosecutor == "TfL") {
         
@@ -125,6 +127,8 @@ router.post('/prosecutor/dates-to-avoid', function (req, res) {
 // *****************************
 // Dates to avoid - confirmation
 router.post('/prosecutor/dates-to-avoid-confirmation', function (req, res) {
+
+    req.session.data['addDatesToAvoidCount'] = "2"
 
     res.redirect('/prosecutor/case-details-page')
     
