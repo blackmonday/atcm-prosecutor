@@ -1,0 +1,52 @@
+{% extends "layout-CPP.html" %}
+
+{% block page_title %}
+    GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+<style>
+    tr {
+        vertical-align: top;
+    }
+</style>
+<main id="content" role="main">
+    
+    <div class="grid-row">
+        <div class="column-full">
+            <!-- Alpha phase banner -->
+            {% include "includes/phase_banner_alpha.html" %}
+            {% include "includes/breadcrumb_back.html" %}
+        </div>
+    </div>
+
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            <h1 class="heading-xlarge top_30 bottom_30">Dates to avoid</h1>
+         </div>
+    </div>
+
+    <div class="grid-row">
+        <div class="column-two-thirds">
+
+            <form class="form" action="" method="post">
+                <div class="form-group">
+                    
+                    <fieldset>
+                        <label class="form-label" for="textarea">If you are calling any witnesses please give their name and date of birth and enter any dates they may not be available to attend court.</label>
+                        <textarea class="form-control form-control-3-4" name="dates-to-avoid" id="dates-to-avoid" rows="5"></textarea>
+                    </fieldset>
+                    
+                    
+                    <p class="top_30"><input class="button" type="submit" value="Continue"></p>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</main>
+
+{% endblock %}
+
+

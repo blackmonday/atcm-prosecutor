@@ -1,0 +1,72 @@
+{% extends "layout-CPP.html" %}
+
+{% block page_title %}
+    GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+<style>
+    tr {
+        vertical-align: top;
+    }
+</style>
+<main id="content" role="main">
+    
+    <div class="grid-row">
+        <div class="column-full">
+            <!-- Alpha phase banner -->
+            {% include "includes/phase_banner_alpha.html" %}
+            {% include "includes/breadcrumb_back.html" %}
+        </div>
+    </div>
+
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            <h1 class="heading-xlarge top_30 bottom_30">Dates to avoid</h1>
+            
+            
+            
+            <!--
+            <div class="confirmation-banner">
+                <div class="confirmation-banner-tick">
+                    <img src="/public/images/confirmation-banner-tick-icon.png">
+                </div>
+                <div class="confirmation-banner-text">Your changes have been saved</div>
+            </div>
+            -->
+            
+            
+            
+            
+            <div class="notification-banner-nest notification-banner-turqoise bottom_15">
+                <div class="notification-banner">
+                    <div class="notification-banner-icon">
+                        <object data="/public/images/icons/tick-icon-white.svg" type="image/svg+xml"></object>
+                    </div>
+                    <div class="notification-banner-text">Dates to avoid court submitted</div>
+                </div>
+            </div>
+            
+            
+            
+            
+         </div>
+    </div>
+
+    <div class="grid-row">
+        <div class="column-full">
+
+            <form class="form" action="" method="post">
+                <div class="form-group">
+                    <p class="top_30"><input class="button" type="submit" value="Continue"></p>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</main>
+
+{% endblock %}
+
+
