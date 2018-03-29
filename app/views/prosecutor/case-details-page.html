@@ -19,6 +19,11 @@
             document.getElementById('datesToAvoidRow').style.display = "none"
         }
         
+        if (document.getElementById('datesToAvoidTD').innerText != "") {
+            document.getElementById('addDatesToAvoidLink').style.display = "none"
+        }
+
+        
     }
 </script>
 
@@ -181,6 +186,7 @@
                 <hr class="bold-hr">
                 <h3 class="heading-medium">Case options</h3>
                 <p><a href="">Withdraw offence</a></p>
+                <p id="addDatesToAvoidLink"><a href="dates-to-avoid.html">Add dates to avoid</a></p>
             </div>
         </div>
     </div>
