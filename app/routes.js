@@ -36,6 +36,7 @@ router.post('/', function (req, res) {
         req.session.data['defendent-first-name'] = "Camilla"
         req.session.data['defendent-last-name'] = "JONES"
         req.session.data['defendent-dob'] = "4 January 1968"
+        req.session.data['defendent-dob-short'] = "4 Jan 1968"
         req.session.data['defendent-age'] = "50"
         req.session.data['defendent-address-line-1'] = "307A Seven Sisters Rd"
         req.session.data['defendent-address-line-2'] = "Harringay"
