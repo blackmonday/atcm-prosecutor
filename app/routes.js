@@ -134,3 +134,38 @@ router.post('/prosecutor/dates-to-avoid-confirmation', function (req, res) {
     res.redirect('/prosecutor/case-details-page')
     
 })
+
+
+
+
+
+
+
+// *************************
+// Upload files for new case
+router.post('/prosecutor/upload-files-for-new-case', function (req, res) {
+
+    res.redirect('/prosecutor/add-details-for-new-case')
+    
+})
+// ************************
+// Add details for new case
+router.post('/prosecutor/add-details-for-new-case', function (req, res) {
+
+    res.redirect('/prosecutor/check-new-case-details')
+    
+})
+// **************************
+// Check new new case details
+router.post('/prosecutor/check-new-case-details', function (req, res) {
+
+    res.redirect('/prosecutor/create-a-new-case-confirmation')
+    
+})
+// ******************************
+// Create a new case confirmation
+router.post('/prosecutor/create-a-new-case-confirmation', function (req, res) {
+
+    res.redirect('/prosecutor/upload-files-for-new-case')
+    
+})

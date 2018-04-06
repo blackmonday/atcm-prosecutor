@@ -1,0 +1,72 @@
+{% extends "layout-CPP.html" %}
+
+{% block page_title %}
+    GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+<style>
+    tr {
+        vertical-align: top;
+    }
+</style>
+<main id="content" role="main">
+    
+    <div class="grid-row">
+        <div class="column-full">
+            <!-- Alpha phase banner -->
+            {% include "includes/phase_banner_alpha.html" %}
+            {% include "includes/breadcrumb_back.html" %}
+        </div>
+    </div>
+
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            <h1 class="heading-xlarge top_30 bottom_30">Upload files for new case</h1>
+            <p class="top_30 bottom_30">To create a case, first use the browse buttons below to add the required documents.</p>
+            
+            <!-- File 1 -->
+            <div class="upload-file">
+                <h4 class="heading-medium bottom_15">Add Single Justice Procedure Notice and other documents served on the defendant</h4>
+                <p class="bottom_5">Put all documents in a single zip file and then upload. Examples of what you can include:</p>
+                <ul class="list list-bullet bottom_15">
+                    <li>Single Justice Procedure Notice</li>
+                    <li>witness statement</li>
+                    <li>certificate of service</li>
+                </ul>
+                <!-- Browse button requires input and button to function in a prototype -->
+                <input id="fileInput" type="file" style="display:none;" onchange="showname()" />
+                <button type="button" onclick="document.getElementById('fileInput').click();">Browse...</button> <span id="fileName">No file selected</span>
+            </div>
+
+            <!-- File 2 -->
+            <div class="upload-file top_30">
+                <h4 class="heading-medium bottom_15">Add record of previous convictions</h4>
+                <p class="bottom_15">This file is required if the defendent has previous convictions.</p>
+                <!-- Browse button requires input and button to function in a prototype -->
+                <input id="fileInput2" type="file" style="display:none;" onchange="showname2()" />
+                <button type="button" onclick="document.getElementById('fileInput2').click();">Browse...</button> <span id="fileName2">No file selected</span>
+            </div>
+            
+         </div>
+    </div>
+
+    <div class="grid-row">
+        <div class="column-two-thirds">
+
+            <form class="form" action="" method="post">
+                <div class="form-group">
+                    
+                    <p class="top_30"><input class="button" type="submit" value="Confirm and continue"></p>
+                    <p class="top_15"><a href="javascript:history.go(-1);">Cancel</a></p>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</main>
+
+{% endblock %}
+
+

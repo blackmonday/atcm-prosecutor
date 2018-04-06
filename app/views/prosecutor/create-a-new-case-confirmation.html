@@ -1,0 +1,58 @@
+{% extends "layout-CPP.html" %}
+
+{% block page_title %}
+    GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+<style>
+    tr {
+        vertical-align: top;
+    }
+</style>
+<main id="content" role="main">
+    
+    <div class="grid-row">
+        <div class="column-full">
+            <!-- Alpha phase banner -->
+            {% include "includes/phase_banner_alpha.html" %}
+            {% include "includes/breadcrumb_back.html" %}
+        </div>
+    </div>
+
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            <h1 class="heading-xlarge top_30 bottom_30">Create a new case</h1>
+         </div>
+    </div>
+
+    <div class="grid-row">
+        <div class="column-two-thirds">
+
+            <form class="form" action="" method="post">
+                <div class="form-group">
+                    
+                    <!-- NOTIFICATION BANNER PATTERN -->
+                    <div class="notification-banner-nest notification-banner-turqoise bottom_15">
+                        <div class="notification-banner">
+                            <div class="notification-banner-icon">
+                                <object data="/public/images/icons/notification-banner/tick-icon-white.svg" type="image/svg+xml"></object>
+                            </div>
+                            <div class="notification-banner-text">A new case has been successfully created</div>
+                        </div>
+                    </div>
+
+                    <p class="top_30"><input class="button" type="submit" value="Create another new case"></p>
+                    <p class="top_15"><a href="dashboard.html">Return to dashboard</a></p>
+
+                </div>
+            </form>
+
+        </div>
+    </div>
+</main>
+
+{% endblock %}
+
+

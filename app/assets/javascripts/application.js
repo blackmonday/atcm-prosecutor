@@ -52,6 +52,27 @@ $(document).ready(function () {
         document.getElementById("row3remove").style.display = "table-cell";
     });
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    $('#offence_date_select_box').change(function() {
+        if (this.value == "1" || this.value == "2" || this.value == "3" || this.value == "5" || this.value == "6") {            
+            $('#offence_date').show();
+            $('#offence_date_2').hide();
+        } else if (this.value == "4") {
+            $('#offence_date').hide();
+            $('#offence_date_2').show();
+        } else {
+            $('#offence_date').hide();
+            $('#offence_date_2').hide();
+        }
+    });
 
 
 
@@ -97,3 +118,53 @@ function tabGroup(tableObj, which) {
         document.getElementById("tabThreeContent").style.display = "block";
     } 
 }
+
+
+
+
+/* UPLOAD FILE PATTERN */
+/* Example 1 */
+function showname () {
+    var name = document.getElementById('fileInput');
+    //alert('Selected file: ' + name.files.item(0).name);
+    //alert('Selected file: ' + name.files.item(0).size);
+    //alert('Selected file: ' + name.files.item(0).type);
+    document.getElementById('fileName').innerHTML = name.files.item(0).name;
+};
+/* Example 2 */
+function showname2 () {
+    var name = document.getElementById('fileInput2');
+    //alert('Selected file: ' + name.files.item(0).name);
+    //alert('Selected file: ' + name.files.item(0).size);
+    //alert('Selected file: ' + name.files.item(0).type);
+    document.getElementById('fileName2').innerHTML = name.files.item(0).name;
+};
+
+
+
+
+/* CHARACTER COUNT */
+$(document).ready(function() {
+    var text_max = 5000; // This the maximum character count
+    var text_spread = 100; // This calculates when to change the text colour to red
+    
+    $('#character_count').html('Character count: 0 /' + text_max);
+
+    $('#textarea').keyup(function() {
+        var text_length = $('#textarea').val().length;
+
+        $('#character_count').html('Character count: ' + text_length + ' /' + text_max);
+        
+        if (text_length > (text_max-text_spread)) {
+            $('#character_count').css('color','#B10E1E');
+        } else {
+            $('#character_count').css('color','#6F777B');
+        }
+        if (text_length > (text_max)) {
+            $('#character_count').addClass('bold');
+        } else {
+            $('#character_count').removeClass('bold');
+        }
+    });
+});
+

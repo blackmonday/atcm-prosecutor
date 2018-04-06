@@ -1,0 +1,398 @@
+{% extends "layout-CPP.html" %}
+
+{% block page_title %}
+    GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+<style>
+    tr {
+        vertical-align: top;
+    }
+    
+    #offence-date-1, #offence-date-2, #offence-date-3, #offence-date-4, #offence-date-5, #offence-date-6 {
+        display: none;
+    }
+</style>
+
+<script>
+
+    window.onload = function() {
+    
+        var date1Value = document.getElementById('date1').innerText;
+        var date2Value = document.getElementById('date2').innerText;
+        var date3Value = document.getElementById('date3').innerText;
+        var date4Value = document.getElementById('date4').innerText;
+        var date5Value = document.getElementById('date5').innerText;
+        var date6Value = document.getElementById('date6').innerText;
+        
+        if (date1Value != "") {
+            document.getElementById('offence-date-1').style.display = "table-row-group";
+            document.getElementById('offence-date-2').style.display = "none";
+            document.getElementById('offence-date-3').style.display = "none";
+            document.getElementById('offence-date-4').style.display = "none";
+            document.getElementById('offence-date-5').style.display = "none";
+            document.getElementById('offence-date-6').style.display = "none";
+        } else if (date2Value != "") {
+            document.getElementById('offence-date-1').style.display = "none";
+            document.getElementById('offence-date-2').style.display = "table-row-group";
+            document.getElementById('offence-date-3').style.display = "none";
+            document.getElementById('offence-date-4').style.display = "none";
+            document.getElementById('offence-date-5').style.display = "none";
+            document.getElementById('offence-date-6').style.display = "none";
+        } else if (date3Value != "") {
+            document.getElementById('offence-date-1').style.display = "none";
+            document.getElementById('offence-date-2').style.display = "none";
+            document.getElementById('offence-date-3').style.display = "table-row-group";
+            document.getElementById('offence-date-4').style.display = "none";
+            document.getElementById('offence-date-5').style.display = "none";
+            document.getElementById('offence-date-6').style.display = "none";
+        } else if (date4Value != "") {
+            document.getElementById('offence-date-1').style.display = "none";
+            document.getElementById('offence-date-2').style.display = "none";
+            document.getElementById('offence-date-3').style.display = "none";
+            document.getElementById('offence-date-4').style.display = "table-row-group";
+            document.getElementById('offence-date-5').style.display = "none";
+            document.getElementById('offence-date-6').style.display = "none";
+        } else if (date5Value != "") {
+            document.getElementById('offence-date-1').style.display = "none";
+            document.getElementById('offence-date-2').style.display = "none";
+            document.getElementById('offence-date-3').style.display = "none";
+            document.getElementById('offence-date-4').style.display = "none";
+            document.getElementById('offence-date-5').style.display = "table-row-group";
+            document.getElementById('offence-date-6').style.display = "none";
+        } else if (date6Value != "") {
+            document.getElementById('offence-date-1').style.display = "none";
+            document.getElementById('offence-date-2').style.display = "none";
+            document.getElementById('offence-date-3').style.display = "none";
+            document.getElementById('offence-date-4').style.display = "none";
+            document.getElementById('offence-date-5').style.display = "none";
+            document.getElementById('offence-date-6').style.display = "table-row-group";
+        } else {
+            document.getElementById('offence-date-1').style.display = "none";
+            document.getElementById('offence-date-2').style.display = "none";
+            document.getElementById('offence-date-3').style.display = "none";
+            document.getElementById('offence-date-4').style.display = "none";
+            document.getElementById('offence-date-5').style.display = "none";
+            document.getElementById('offence-date-6').style.display = "none";
+        }
+        
+    }
+ 
+</script>
+
+<main id="content" role="main">
+    
+    <div class="grid-row">
+        <div class="column-full">
+            <!-- Alpha phase banner -->
+            {% include "includes/phase_banner_alpha.html" %}
+            {% include "includes/breadcrumb_back.html" %}
+        </div>
+    </div>
+
+    <div class="grid-row">
+        <div class="column-full">
+            <h1 class="heading-xlarge top_30 bottom_30">Check new case details</h1>
+        </div>
+    </div>
+
+    <div class="grid-row">
+        <div class="column-full">
+
+            <div class="grid-row bottom_15">
+                <div class="column-half">
+                    <span class="heading-medium">Case details</span>
+                </div>
+                <div class="column-half" style="text-align: right">
+                    <a href="add-details-for-new-case.html">Change<span class="visually-hidden"> case details</span></a>
+                </div>
+            </div>
+            
+            <dl class="govuk-check-your-answers cya-questions-short">
+                                
+                <div>
+                    <dt class="cya-question">
+                        Case reference
+                    </dt>
+                    <dd class="cya-answer">
+                        {{ data['new-case-case-reference'] }}
+                    </dd>
+                    <dd class="cya-change"></dd>
+                </div>
+
+                <div>
+                    <dt class="cya-question">
+                        Date charge issued
+                    </dt>
+                    <dd class="cya-answer">
+                        {{ data['new-case-posting-date'] }}
+                    </dd>
+                    <dd class="cya-change"></dd>
+                </div>
+
+                <div>
+                    <dt class="cya-question">
+                        Number of previous convictions
+                    </dt>
+                    <dd class="cya-answer">
+                        {{ data['new-case-previous-convictions'] }}
+                    </dd>
+                    <dd class="cya-change"></dd>
+                </div>
+
+                <div>
+                    <dt class="cya-question">
+                        Costs
+                    </dt>
+                    <dd class="cya-answer">
+                        {{ data['new-case-costs'] }}
+                    </dd>
+                    <dd class="cya-change"></dd>
+                </div>
+            
+            </dl>
+
+            <div class="grid-row top_60 bottom_15">
+                <div class="column-half">
+                    <span class="heading-medium">Defendant details</span>
+                </div>
+                <div class="column-half" style="text-align: right">
+                    <a href="add-details-for-new-case.html">Change<span class="visually-hidden"> defendant details</span></a>
+                </div>
+            </div>
+                        
+            <dl class="govuk-check-your-answers cya-questions-short">
+                <div>
+                    <dt class="cya-question">
+                        Defendant type
+                    </dt>
+                    <dd class="cya-answer">
+                        {{ data['new-case-defendant-type-group'] }}
+                    </dd>
+                    <dd class="cya-change"></dd>
+                </div>
+                
+                <div>
+                    <dt class="cya-question">
+                        Title
+                    </dt>
+                    <dd class="cya-answer">
+                        {{ data['new-case-defendant-title'] }}
+                    </dd>
+                    <dd class="cya-change"></dd>
+                </div>
+                
+                <div>
+                    <dt class="cya-question">
+                        Name
+                    </dt>
+                    <dd class="cya-answer">
+                        {{ data['new-case-defendant-first-names'] }} {{ data['new-case-defendant-last-name'] }}
+                    </dd>
+                    <dd class="cya-change"></dd>
+                </div>
+                
+                <div>
+                    <dt class="cya-question">
+                        Date of birth
+                    </dt>
+                    <dd class="cya-answer">
+                        {{ data['new-case-defendant-dob'] }}
+                    </dd>
+                    <dd class="cya-change"></dd>
+                </div>
+                
+                <div>
+                    <dt class="cya-question">
+                        Address
+                    </dt>
+                    <dd class="cya-answer">
+                        {{ data['new-case-defendant-address-line-1'] }}<br>
+                        {{ data['new-case-defendant-address-line-2'] }}<br>
+                        {{ data['new-case-defendant-address-line-3'] }}<br>
+                        {{ data['new-case-defendant-town-or-city'] }}<br>
+                        {{ data['new-case-defendant-post-code'] }}<br>
+                    </dd>
+                    <dd class="cya-change"></dd>
+                </div>
+                
+                <div>
+                    <dt class="cya-question">
+                        Telephone number
+                    </dt>
+                    <dd class="cya-answer">
+                        {{ data['new-case-defendant-telephone'] }}
+                    </dd>
+                    <dd class="cya-change"></dd>
+                </div>
+                
+                <div>
+                    <dt class="cya-question">
+                        Mobile
+                    </dt>
+                    <dd class="cya-answer">
+                        {{ data['new-case-defendant-mobile'] }}
+                    </dd>
+                    <dd class="cya-change"></dd>
+                </div>
+                
+                <div>
+                    <dt class="cya-question">
+                        Email
+                    </dt>
+                    <dd class="cya-answer">
+                        {{ data['new-case-defendant-email'] }}
+                    </dd>
+                    <dd class="cya-change"></dd>
+                </div>
+                            
+            </dl>
+
+            <div class="grid-row top_60 bottom_15">
+                <div class="column-half">
+                    <span class="heading-medium">Offence details</span>
+                </div>
+                <div class="column-half" style="text-align: right">
+                    <a href="add-details-for-new-case.html">Change<span class="visually-hidden"> offence details</span></a>
+                </div>
+            </div>
+                                    
+            <dl class="govuk-check-your-answers cya-questions-short">
+                <div>
+                    <dt class="cya-question">
+                        Offence code
+                    </dt>
+                    <dd class="cya-answer">
+                        {{ data['new-case-offence-code'] }}
+                    </dd>
+                    <dd class="cya-change"></dd>
+                </div>
+                
+                <div>
+                    <dt class="cya-question">
+                        Offence wording
+                    </dt>
+                    <dd class="cya-answer">
+                        {{ data['new-case-offence-wording'] }}
+                    </dd>
+                    <dd class="cya-change"></dd>
+                </div>
+                
+                <div id="offence-date-1">
+                    <dt class="cya-question">
+                        Offence date
+                    </dt>
+                    <dd class="cya-answer">
+                        On or in <span id="date1">{{ data['new-case-offence-date'] }}</span>
+                    </dd>
+                    <dd class="cya-change"></dd>
+                </div>
+                
+                <div id="offence-date-2">
+                    <dt class="cya-question">
+                        Offence date
+                    </dt>
+                    <dd class="cya-answer">
+                        Before <span id="date2">{{ data['new-case-offence-date'] }}</span>
+                    </dd>
+                    <dd class="cya-change"></dd>
+                </div>
+                
+                <div id="offence-date-3">
+                    <dt class="cya-question">
+                        Offence date
+                    </dt>
+                    <dd class="cya-answer">
+                        After <span id="date3">{{ data['new-case-offence-date'] }}</span>
+                    </dd>
+                    <dd class="cya-change"></dd>
+                </div>
+                
+                <div id="offence-date-4">
+                    <dt class="cya-question">
+                        Offence date
+                    </dt>
+                    <dd class="cya-answer">
+                        Between <span id="date4">{{ data['new-case-first-offence-date'] }}</span> and {{ data['new-case-second-offence-date'] }}
+                    </dd>
+                    <dd class="cya-change"></dd>
+                </div>
+                
+                <div id="offence-date-5">
+                    <dt class="cya-question">
+                        Offence date
+                    </dt>
+                    <dd class="cya-answer">
+                        On or about <span id="date5">{{ data['new-case-offence-date'] }}</span>
+                    </dd>
+                    <dd class="cya-change"></dd>
+                </div>
+                
+                <div id="offence-date-6">
+                    <dt class="cya-question">
+                        Offence date
+                    </dt>
+                    <dd class="cya-answer">
+                        On or before <span id="date6">{{ data['new-case-offence-date'] }}</span>
+                    </dd>
+                    <dd class="cya-change"></dd>
+                </div>
+                                
+                <div>
+                    <dt class="cya-question">
+                        Statement of facts
+                    </dt>
+                    <dd class="cya-answer">
+                        {{ data['new-case-statement-of-facts'] }}
+                    </dd>
+                    <dd class="cya-change"></dd>
+                </div>
+                            
+            </dl>
+
+             <div class="grid-row top_60 bottom_15">
+                <div class="column-half">
+                    <span class="heading-medium">Files attached to this case</span>
+                </div>
+                <div class="column-half" style="text-align: right">
+                    <a href="upload-files-for-new-case.html">Change<span class="visually-hidden"> files attached to this case</span></a>
+                </div>
+            </div>
+                        
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Type</th>
+                        <th scope="col">Uploaded on</th>
+                        <th scope="col">Time</th>
+                        <th scope="col">&nbsp;</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">SJP notice</th>
+                        <td>ZIP, 256kb</td>
+                        <td>15 April 2018</td>
+                        <td>4:38pm</td>
+                        <td style="text-align: right"><a href="#">Remove</a></td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <form class="form" action="" method="post">
+                <div class="form-group">
+                    <p class="top_60"><input class="button" type="submit" value="Confirm and continue"></p>
+                    <p class="top_15"><a href="javascript:history.go(-1);">Cancel</a></p>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</main>
+
+{% endblock %}
+
+

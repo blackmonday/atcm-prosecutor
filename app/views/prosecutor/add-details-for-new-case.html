@@ -1,0 +1,269 @@
+{% extends "layout-CPP.html" %}
+
+{% block page_title %}
+    GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+<style>
+    tr {
+        vertical-align: top;
+    }
+    
+    #offence_date, #offence_date_2 {
+        display: none;
+    }
+</style>
+
+<main id="content" role="main">
+    
+    <div class="grid-row">
+        <div class="column-full">
+            <!-- Alpha phase banner -->
+            {% include "includes/phase_banner_alpha.html" %}
+            {% include "includes/breadcrumb_back.html" %}
+        </div>
+    </div>
+
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            <h1 class="heading-xlarge top_30 bottom_30">Add details for new case</h1>
+         </div>
+    </div>
+
+    <div class="grid-row">
+        <div class="column-two-thirds">
+
+            <form class="form" action="" method="post">
+                <div class="form-group">
+                    
+                    <h2 class="heading-medium">Case details</h2>
+
+                    <fieldset>
+                        <label class="form-label bold" for="new-case-case-reference"><span class="bold">Case reference</span></label>
+                        <input class="form-control" id="new-case-case-reference" type="text" name="new-case-case-reference" value="{{ data['new-case-case-reference'] }}">
+                    </fieldset>
+                    
+                    <fieldset>
+                        <label class="form-label top_15" for="new-case-posting-date"><span class="bold">Date charge issued</span></label>
+                        <input class="form-control" id="new-case-posting-date" type="text" name="new-case-posting-date" value="{{ data['new-case-posting-date'] }}">
+                    </fieldset>
+                    
+                    <fieldset>
+                        <label class="form-label top_15" for="new-case-previous-convictions"><span class="bold">Number of previous convictions</span></label>
+                        <input class="form-control" id="new-case-previous-convictions" type="number" name="new-case-previous-convictions" value="{{ data['new-case-previous-convictions'] }}">
+                    </fieldset>
+                    
+                    <fieldset>
+                        <label class="form-label top_15" for="new-case-costs"><span class="bold">Costs</span></label>
+                        <div class="input-icon">
+                            <i>£</i>
+                            <input class="form-control" id="new-case-costs" type="number" min="0.01" step="0.01"  name="new-case-costs" value="{{ data['new-case-costs'] }}">
+                        </div>
+                    </fieldset>
+                    
+                    <hr class="top_60 bottom_60">
+                    
+                    <h2 class="heading-medium">Defendant details</h2>
+                    
+                    <fieldset class="inline">
+                        <legend>
+                            <h3 class="heading-small">
+                                Defendant type
+                            </h3>
+                        </legend>
+                        <div class="multiple-choice" data-target="new-person">
+                            <input id="radio-inline-1" type="radio" name="new-case-defendant-type-group" value="Person" {{ checked('new-case-defendant-type-group','Person') }}>
+                            <label for="radio-inline-1">Person</label>
+                        </div>
+                        <div class="multiple-choice" data-target="new-company">
+                            <input id="radio-inline-2" type="radio" name="new-case-defendant-type-group" value="Company" {{ checked('new-case-defendant-type-group','Company') }}>
+                            <label for="radio-inline-2">Company</label>
+                        </div>
+                        
+                        <div class="panel panel-border-narrow js-hidden" id="new-person">
+                            <fieldset>
+                                <label class="form-label top_15" for="new-case-defendant-title"><span class="bold">Title</span></label>
+                                <select class="form-control" id="select-box" name="new-case-defendant-title">
+                                    <option value="">Select</option>
+                                    <option value="Mr.">Mr.</option>
+                                    <option value="Mrs.">Mrs.</option>
+                                    <option value="Ms.">Ms.</option>
+                                    <option value="Miss">Miss</option>
+                                </select>
+                            </fieldset>
+                
+                            <fieldset class="top_15">
+                                <label class="form-label" for="new-case-defendant-first-names"><span class="bold">First names</span></label>
+                                <input class="form-control" id="new-case-defendant-first-names" type="text" name="new-case-defendant-first-names" value="{{ data['new-case-defendant-first-names'] }}">
+                            </fieldset>
+                            
+                            <fieldset class="top_15">
+                                <label class="form-label" for="new-case-defendant-last-name"><span class="bold">Last name</span></label>
+                                <input class="form-control" id="new-case-defendant-last-name" type="text" name="new-case-defendant-last-name" value="{{ data['new-case-defendant-last-name'] }}">
+                            </fieldset>
+                            
+                            <fieldset class="top_15">
+                                <label class="form-label" for="new-case-defendant-dob"><span class="bold">Date of birth (optional)</span></label>
+                                <input class="form-control" id="new-case-defendant-dob" type="text" name="new-case-defendant-dob" value="{{ data['new-case-defendant-dob'] }}">
+                            </fieldset>
+                            
+                            <fieldset class="top_15">
+                                <label class="form-label" for="new-case-defendant-address-line-1"><span class="bold">Building and street</span></label>
+                                <input class="form-control" id="new-case-defendant-address-line-1" type="text" name="new-case-defendant-address-line-1" value="{{ data['new-case-defendant-address-line-1'] }}">
+                                <input class="form-control top_5" id="new-case-defendant-address-line-2" type="text" name="new-case-defendant-address-line-2" value="{{ data['new-case-defendant-address-line-2'] }}">
+                                <input class="form-control top_5" id="new-case-defendant-address-line-3" type="text" name="new-case-defendant-address-line-3" value="{{ data['new-case-defendant-address-line-3'] }}">
+                            </fieldset>
+                            
+                            <fieldset class="top_15">
+                                <label class="form-label" for="new-case-defendant-town-or-city"><span class="bold">Town or city (optional)</span></label>
+                                <input class="form-control" id="new-case-defendant-town-or-city" type="text" name="new-case-defendant-town-or-city" value="{{ data['new-case-defendant-town-or-city'] }}">
+                            </fieldset>
+                            
+                            <fieldset class="top_15">
+                                <label class="form-label" for="new-case-defendant-post-code"><span class="bold">Post code</span></label>
+                                <input class="form-control" id="new-case-defendant-post-code" type="text" name="new-case-defendant-post-code" value="{{ data['new-case-defendant-post-code'] }}">
+                            </fieldset>
+                            
+                            <fieldset class="top_15">
+                                <label class="form-label" for="new-case-defendant-telephone"><span class="bold">Telephone (optional)</span></label>
+                                <input class="form-control" id="new-case-defendant-telephone" type="text" name="new-case-defendant-telephone" value="{{ data['new-case-defendant-telephone'] }}">
+                            </fieldset>
+                            
+                            <fieldset class="top_15">
+                                <label class="form-label" for="new-case-defendant-mobile"><span class="bold">Mobile (optional)</span></label>
+                                <input class="form-control" id="new-case-defendant-mobile" type="text" name="new-case-defendant-mobile" value="{{ data['new-case-defendant-mobile'] }}">
+                            </fieldset>
+                            
+                            <fieldset class="top_15">
+                                <label class="form-label" for="new-case-defendant-email"><span class="bold">Email (optional)</span></label>
+                                <input class="form-control" id="new-case-defendant-email" type="text" name="new-case-defendant-email" value="{{ data['new-case-defendant-email'] }}">
+                            </fieldset>                            
+                        </div>
+
+                        <div class="panel panel-border-narrow js-hidden" id="new-company">                            
+                            <fieldset class="top_15">
+                                <label class="form-label" for="new-case-defendant-company-name"><span class="bold">Company name</span></label>
+                                <input class="form-control" id="new-case-defendant-last-name" type="text" name="new-case-defendant-last-name" value="{{ data['new-case-defendant-last-name'] }}">
+                            </fieldset>
+                            
+                            <fieldset class="top_15">
+                                <label class="form-label" for="new-case-defendant-address-line-1"><span class="bold">Building and street</span></label>
+                                <input class="form-control" id="new-case-defendant-address-line-1" type="text" name="new-case-defendant-address-line-1" value="{{ data['new-case-defendant-address-line-1'] }}">
+                                <input class="form-control top_5" id="new-case-defendant-address-line-2" type="text" name="new-case-defendant-address-line-2" value="{{ data['new-case-defendant-address-line-2'] }}">
+                                <input class="form-control top_5" id="new-case-defendant-address-line-3" type="text" name="new-case-defendant-address-line-3" value="{{ data['new-case-defendant-address-line-3'] }}">
+                            </fieldset>
+                            
+                            <fieldset class="top_15">
+                                <label class="form-label" for="new-case-defendant-town-or-city"><span class="bold">Town or city (optional)</span></label>
+                                <input class="form-control" id="new-case-defendant-town-or-city" type="text" name="new-case-defendant-town-or-city" value="{{ data['new-case-defendant-town-or-city'] }}">
+                            </fieldset>
+                            
+                            <fieldset class="top_15">
+                                <label class="form-label" for="new-case-defendant-post-code"><span class="bold">Post code</span></label>
+                                <input class="form-control" id="new-case-defendant-post-code" type="text" name="new-case-defendant-post-code" value="{{ data['new-case-defendant-post-code'] }}">
+                            </fieldset>
+                            
+                            <fieldset class="top_15">
+                                <label class="form-label" for="new-case-defendant-telephone"><span class="bold">Telephone (optional)</span></label>
+                                <input class="form-control" id="new-case-defendant-telephone" type="text" name="new-case-defendant-telephone" value="{{ data['new-case-defendant-telephone'] }}">
+                            </fieldset>
+                            
+                            <fieldset class="top_15">
+                                <label class="form-label" for="new-case-defendant-email"><span class="bold">Email (optional)</span></label>
+                                <input class="form-control" id="new-case-defendant-email" type="text" name="new-case-defendant-email" value="{{ data['new-case-defendant-email'] }}">
+                            </fieldset>
+                            
+                        </div>
+
+                    </fieldset>
+                    
+                    <hr class="top_60 bottom_60">
+                    
+                    <h2 class="heading-medium">Offence details</h2>
+                    
+                    <fieldset>
+                        <label class="form-label bold" for="new-case-case-offence-code"><span class="bold">Offence code</span></label>
+                        <input class="form-control" id="new-case-offence-code" type="text" name="new-case-offence-code" value="{{ data['new-case-offence-code'] }}">
+                    </fieldset>
+
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <fieldset>
+                        <label class="form-label top_15" for="new-case-offence-date-code"><span class="bold">Offence date option</span></label>
+                        <select class="form-control" id="offence_date_select_box" name="new-case-offence-date-code">
+                            <option value="">Select</option>
+                            <option value="1">1 - On or in</option>
+                            <option value="2">2 - Before</option>
+                            <option value="3">3 - After</option>
+                            <option value="4">4 - Between</option>
+                            <option value="5">5 - On or about</option>
+                            <option value="6">6 - On or before</option>
+                        </select>
+                    </fieldset>
+                
+                    <div class="panel panel-border-narrow top_15" id="offence_date">
+                        <fieldset>
+                            <label class="form-label" for="new-case-offence-date"><span class="bold">Offence date</span></label>
+                            <input class="form-control" id="new-case-offence-date" type="text" name="new-case-offence-date" value="{{ data['new-case-offence-date'] }}">
+                        </fieldset>
+                    </div>
+                    
+                    <div class="panel panel-border-narrow top_15" id="offence_date_2">
+                        <fieldset>
+                            <label class="form-label" for="new-case-first-offence-date"><span class="bold">First offence date</span></label>
+                            <input class="form-control" id="new-case-first-offence-date" type="text" name="new-case-first-offence-date" value="{{ data['new-case-first-offence-date'] }}">
+                        </fieldset>
+                        <fieldset class="top_15">
+                            <label class="form-label" for="new-case-second-offence-date"><span class="bold">Second offence date</span></label>
+                            <input class="form-control" id="new-case-second-offence-date" type="text" name="new-case-second-offence-date" value="{{ data['new-case-second-offence-date'] }}">
+                        </fieldset>
+                    </div>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <fieldset>
+                        <label class="form-label top_15" for="new-case-statement-of-facts">
+                            <span class="heading-small bold">Statement of facts</span>
+                        </label>
+                        <textarea class="form-control form-control-full" name="new-case-statement-of-facts" id="textarea" rows="10">{{ data['new-case-statement-of-facts'] }}</textarea>
+                        <div class="font-xsmall form-control-full" id="character_count"></div>
+                    </fieldset>                    
+
+                    <fieldset>
+                        <label class="form-label top_15" for="new-case-compensation"><span class="bold">Compensation</span></label>
+                        <div class="input-icon">
+                            <i>£</i>
+                            <input class="form-control" id="new-case-compensation" type="number" min="0.01" step="0.01"  name="new-case-compensation" value="{{ data['new-case-compensation'] }}">
+                        </div>
+                    </fieldset>
+
+                    <p class="top_30"><input class="button" type="submit" value="Confirm and continue"></p>
+                    <p class="top_15"><a href="javascript:history.go(-1);">Cancel</a></p>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</main>
+
+{% endblock %}
+
+
