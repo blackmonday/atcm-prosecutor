@@ -131,7 +131,7 @@ router.post('/prosecutor/dates-to-avoid-confirmation', function (req, res) {
 
     req.session.data['addDatesToAvoidCount'] = "2"
 
-    res.redirect('/prosecutor/case-details-page')
+    res.redirect('/prosecutor/add-dates-to-avoid')
     
 })
 
