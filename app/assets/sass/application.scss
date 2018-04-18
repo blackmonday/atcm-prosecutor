@@ -160,15 +160,18 @@ $path: "/public/images/";
 
 
 
+// Search
 .search-submit {
     height: 40px;
     width: 40px;
-    background-color: #0B0C0C;
+    background: #0B0C0C;
     border: none;
     margin-left:-43px;
+    border-radius:0;
+    padding-top:8px;
 }
 .search-submit-blue {
-    background-color: #005EA5;
+    background: #005EA5;
 }
 
 

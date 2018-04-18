@@ -16,11 +16,10 @@
     window.onload = function() {
         
         if (document.getElementById('datesToAvoidTD').innerText == "") {
-            document.getElementById('datesToAvoidRow').style.display = "none"
-        }
-        
-        if (document.getElementById('datesToAvoidTD').innerText != "") {
+            //document.getElementById('datesToAvoidRow').style.display = "none"
+        } else if (document.getElementById('datesToAvoidTD').innerText != "") {
             document.getElementById('addDatesToAvoidLink').style.display = "none"
+            document.getElementById('addDatesToAvoidLink2').style.display = "none"
         }
 
     }
@@ -84,7 +83,7 @@
                         </tr>
                         <tr id="datesToAvoidRow">
                             <th class="bold" style="border: none">Dates to avoid</th>
-                            <td id="datesToAvoidTD" style="border: none; white-space: pre-wrap">{{data['dates-to-avoid']}}</td>
+                            <td style="border: none; white-space: pre-wrap"><span id="addDatesToAvoidLink2"><a href="dates-to-avoid.html">Add dates to avoid</a></span><span id="datesToAvoidTD">{{data['dates-to-avoid']}}</span></td>
                         </tr>
                     </table>
                 </div>
