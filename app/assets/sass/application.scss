@@ -515,3 +515,42 @@ button .disabled {
 .form-control-full {
   width: 100%;
 }
+
+
+
+
+
+
+/* USE THIS TO AVOID USERS CLICKING ON THINGS YOU DON'T WANT THEM TO CLICK ON */
+#nonActiveLink {
+    text-decoration: underline;
+    color: #005EA5;
+}
+
+
+
+
+
+/* Summary item pattern */
+.summary-item-small h2 {
+    margin-bottom: 0;
+    font-size: 48px;
+    line-height: 36px;
+    font-weight: bold;
+}
+.summary-item-large h2 {
+    margin-bottom: 0;
+    font-size: 80px;
+    line-height:74px;
+    font-weight: bold;
+}
+.summary-item-small a, .summary-item-large a {
+    text-decoration: none;
+}
+.summary-item-small p, .summary-item-large p {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: 36px;
+    font-weight: bold;
+}

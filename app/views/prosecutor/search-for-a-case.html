@@ -30,7 +30,7 @@
     <div class="grid-row">
         <div class="column-two-thirds search-container">
             <p class="top_0 bottom_5">Enter case reference number or defendant's last name</p>
-            <input class="form-control form-control-3-4" id="full-name-f1" type="text" name="full-name-f1" value="5160990" style="height:40px;">
+            <input class="form-control form-control-3-4" id="full-name-f1" type="text" name="full-name-f1" value="{{ data['case-search']}}" style="height:40px;">
             
             <button type="submit" class="search-submit search-submit-blue" style="vertical-align: bottom">
                 <svg width="21px" height="22px" viewBox="0 0 21 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -47,9 +47,8 @@
             </button>            
 
             <div class="panel panel-border-wide top_15" style="padding-top: 10px; padding-bottom: 5px">
-                <p>
-                    1 case found
-                </p>
+                <p class="bottom_15">1 case found</p>
+                <p class="top_15"><img src="/public/images/alert-icon-black.svg" class="warning-banner-icon" style="margin-right:5px">Cases with updated defendant details</p>
             </div>
         </div>
     </div>
@@ -69,7 +68,7 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <th scope="row"><a href="case-details-page.html">{{data['defendent-last-name']}} {{data['defendent-first-name']}}</a></th>
+                        <th scope="row"><img src="/public/images/alert-icon-black.svg" class="warning-banner-icon" style="margin-right:5px"><a href="case-details-page.html">{{data['defendent-last-name']}} {{data['defendent-first-name']}}</a></th>
                         <td>{{data['case-reference']}}</td>
                         <td>{{data['defendent-dob-short']}}</td>
                         <td>{{data['case-status']}}</td>

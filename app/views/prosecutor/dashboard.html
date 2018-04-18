@@ -8,42 +8,163 @@
 
 {% include "includes/homepage_header_template_2.html" %}
 
+<script>
+    window.onload = function() {
+        
+        if (document.getElementById('whichProsecutor').innerText == "TfL") {
+            document.getElementById('tvlContent').style.display = "none"
+        } else if (document.getElementById('whichProsecutor').innerText == "TV Licensing") {
+            document.getElementById('tflContent').style.display = "none"
+        }
+
+    }
+</script>
+
 <main id="content" role="main">
         
     {% include "includes/phase_banner_alpha.html" %}
+    
+    <div class="grid-row" style="display:none">
+        <div class="column-full">
+            <p id="whichProsecutor" class="top_60 bottom_10" style="color: red">{{ data['prosecutor-group']}}</p>
+        </div>
+    </div>
 
-    <div class="grid-row">
-        
-        <div class="column-two-thirds">            
-            <h2 class="heading-medium">Other tasks</h2> 
-            
-            <!-- Link one -->
-            <div style="float: left">
-                <img src="/public/images/alert-icon-black.svg" style="height: 23px; padding-right: 5px">
+    <!-- TfL -->
+    <div id="tflContent">
+        <div class="grid-row">
+            <div class="column-two-thirds">
+
+                <h2 class="heading-medium top_60">Send data files to court</h2>
+                
+                <p id="nonActiveLink">Upload header and offence CSVs</p>
+                <p id="nonActiveLink">Check CSV uploads</p>
+                
             </div>
-            <div>
-                <a href="add-dates-to-avoid.html" title="" style="text-decoration: none"><span class="bold" style="text-decoration: underline">Review not guilty pleas</span><span class="bold"> ({{data['addDatesToAvoidCount']}})</span></a>
+            <div class="column-one-third">
+                
+                <!-- Summary item large - as text link -->
+                <div class="summary-item-large top_60">
+                    <span style="color: #005EA5">
+                        <h2>4</h2>
+                        <p class="summary-item-secondary">CSV errors in last upload</p>
+                    </span>
+                </div>
+                
             </div>
-            <!--
-            <div>
-                <img src="/public/images/alert-icon-black.svg" style="height: 23px; padding-left: 5px">
-            </div>
-            -->
-            
-            <!-- Link two -->
-            <p class="top_20"><a href="defendant-details-updated.html" title="" style="text-decoration: none"><span style="text-decoration: underline">Defendant details updated</span><span class="bold"> (2)</span></a></p>
-            
-            <!-- Link three -->
-            <p><a href="" title="">Withdraw an offence</a></p>
-            
-            <!-- Link four -->
-            <p><a href="" title="">Export case results by date</a></p>
-            
-            <!-- Link five -->
-            <p><a href="upload-files-for-new-case.html" title="Manually create a new case">Manually create a new case</a></p>
-            
         </div>
         
+        <div class="grid-row">
+            <div class="column-full">
+                <hr class="top_60 bottom_60">
+            </div>
+        </div>
+        
+
+        <div class="grid-row">
+            <div class="column-two-thirds">
+
+                <h2 class="heading-medium top_30">Send SJP notices and other documents</h2>
+                
+                <p id="nonActiveLink">Upload SJP notices, previous convictions and witness statements</p>
+                <p id="nonActiveLink">Check document uploads</p>
+                    
+            </div>
+            <div class="column-one-third">
+                                           
+                <!-- Summary item large - as text link -->
+                <div class="summary-item-large top_30">
+                    <span style="color: #005EA5">
+                        <h2>3</h2>
+                        <p class="summary-item-secondary">document errors in last upload</p>
+                    </span>
+                </div>
+                
+                <!-- Summary item large - as text link -->
+                <div class="summary-item-large top_30">
+                    <span style="color: #005EA5">
+                        <h2>5</h2>
+                        <p class="summary-item-secondary">cases missing SJP notices</p>
+                    </span>
+                </div>
+                
+            </div>
+        </div>
+        
+        <div class="grid-row">
+            <div class="column-full">
+                <hr class="top_60 bottom_60">
+            </div>
+        </div>
+
+         <div class="grid-row">
+            <div class="column-two-thirds">
+
+                   <h2 class="heading-medium top_30">Other tasks</h2> 
+
+                    <!-- Link one -->
+                    <div style="float: left">
+                        <img src="/public/images/alert-icon-black.svg" style="height: 23px; padding-right: 5px">
+                    </div>
+                    <div>
+                        <a href="add-dates-to-avoid.html" title="" style="text-decoration: none"><span class="bold" style="text-decoration: underline">Review not guilty pleas</span><span class="bold"> ({{data['addDatesToAvoidCount']}})</span></a>
+                    </div>
+                    <!--
+                    <div>
+                        <img src="/public/images/alert-icon-black.svg" style="height: 23px; padding-left: 5px">
+                    </div>
+                    -->
+
+                    <!-- Link two -->
+                    <p class="top_20"><a href="defendant-details-updated.html" title="" style="text-decoration: none"><span style="text-decoration: underline">Defendant details updated</span><span class="bold"> (2)</span></a></p>
+
+                    <!-- Link three -->
+                    <p id="nonActiveLink">Withdraw an offence</p>
+
+                    <!-- Link four -->
+                    <p id="nonActiveLink">Export case results by date</p>
+
+                    <!-- Link five -->
+                    <p><a href="upload-files-for-new-case.html" title="Manually create a new case">Manually create a new case</a></p>
+                
+            </div>
+        </div>
+    </div>
+ 
+    <!-- TV licensing -->
+    <div id="tvlContent">
+        <div class="grid-row">
+            <div class="column-two-thirds">
+
+                <h2 class="heading-medium">Other tasks</h2> 
+
+                <!-- Link one -->
+                <div style="float: left">
+                    <img src="/public/images/alert-icon-black.svg" style="height: 23px; padding-right: 5px">
+                </div>
+                <div>
+                    <a href="add-dates-to-avoid.html" title="" style="text-decoration: none"><span class="bold" style="text-decoration: underline">Review not guilty pleas</span><span class="bold"> ({{data['addDatesToAvoidCount']}})</span></a>
+                </div>
+                <!--
+                <div>
+                    <img src="/public/images/alert-icon-black.svg" style="height: 23px; padding-left: 5px">
+                </div>
+                -->
+
+                <!-- Link two -->
+                <p class="top_20"><a href="defendant-details-updated.html" title="" style="text-decoration: none"><span style="text-decoration: underline">Defendant details updated</span><span class="bold"> (2)</span></a></p>
+
+                <!-- Link three -->
+                <p id="nonActiveLink">Withdraw an offence</p>
+
+                <!-- Link four -->
+                <p id="nonActiveLink">Export case results by date</p>
+
+                <!-- Link five -->
+                <p><a href="upload-files-for-new-case.html" title="Manually create a new case">Manually create a new case</a></p>
+                
+            </div>
+        </div>
     </div>
     
 </main>
