@@ -24,7 +24,25 @@
         if (defendantType == "Company") {
             document.getElementById('title').style.display = "none";
             document.getElementById('dob').style.display = "none";
+            document.getElementById('personsName').style.display = "none"
+            document.getElementById('personsAddress').style.display = "none"
+            document.getElementById('personsTelephoneNumber').style.display = "none"
+            document.getElementById('personsMobile').style.display = "none"
+            document.getElementById('personsEmail').style.display = "none"
+        } else {
+            document.getElementById('companyName').style.display = "none"
+            document.getElementById('companyAddress').style.display = "none"
+            document.getElementById('companyTelephoneNumber').style.display = "none"
+            document.getElementById('companyEmail').style.display = "none"
         }
+        
+        
+                
+                
+                
+                
+                
+
     
         var date1Value = document.getElementById('date1').innerText;
         var date2Value = document.getElementById('date2').innerText;
@@ -190,12 +208,22 @@
                     <dd class="cya-change"></dd>
                 </div>
                 
-                <div>
+                <div id="personsName">
                     <dt class="cya-question">
                         Name
                     </dt>
                     <dd class="cya-answer">
                         {{ data['new-case-defendant-first-names'] }} {{ data['new-case-defendant-last-name'] }}
+                    </dd>
+                    <dd class="cya-change"></dd>
+                </div>
+
+                <div id="companyName">
+                    <dt class="cya-question">
+                        Company name
+                    </dt>
+                    <dd class="cya-answer">
+                        {{ data['new-case-company-name'] }}
                     </dd>
                     <dd class="cya-change"></dd>
                 </div>
@@ -210,7 +238,7 @@
                     <dd class="cya-change"></dd>
                 </div>
                 
-                <div>
+                <div id="personsAddress">
                     <dt class="cya-question">
                         Address
                     </dt>
@@ -224,7 +252,21 @@
                     <dd class="cya-change"></dd>
                 </div>
                 
-                <div>
+                <div id="companyAddress">
+                    <dt class="cya-question">
+                        Address
+                    </dt>
+                    <dd class="cya-answer">
+                        {{ data['new-case-company-address-line-1'] }}<br>
+                        {{ data['new-case-company-address-line-2'] }}<br>
+                        {{ data['new-case-company-address-line-3'] }}<br>
+                        {{ data['new-case-company-town-or-city'] }}<br>
+                        {{ data['new-case-company-post-code'] }}<br>
+                    </dd>
+                    <dd class="cya-change"></dd>
+                </div>
+
+                <div id="personsTelephoneNumber">
                     <dt class="cya-question">
                         Telephone number
                     </dt>
@@ -233,8 +275,24 @@
                     </dd>
                     <dd class="cya-change"></dd>
                 </div>
+                <div id="companyTelephoneNumber">
+                    <dt class="cya-question">
+                        Telephone number
+                    </dt>
+                    <dd class="cya-answer">
+                        {{ data['new-case-company-telephone'] }}
+                    </dd>
+                    <dd class="cya-change"></dd>
+                </div>
                 
-                <div>
+
+                
+                
+                
+                
+                
+                
+                <div id="personsMobile">
                     <dt class="cya-question">
                         Mobile
                     </dt>
@@ -244,7 +302,14 @@
                     <dd class="cya-change"></dd>
                 </div>
                 
-                <div>
+                
+
+                
+                
+                
+                
+                
+                <div id="personsEmail">
                     <dt class="cya-question">
                         Email
                     </dt>
@@ -254,6 +319,22 @@
                     <dd class="cya-change"></dd>
                 </div>
                             
+                <div id="companyEmail">
+                    <dt class="cya-question">
+                        Email
+                    </dt>
+                    <dd class="cya-answer">
+                        {{ data['new-case-company-email'] }}
+                    </dd>
+                    <dd class="cya-change"></dd>
+                </div>
+                            
+
+            
+            
+            
+            
+            
             </dl>
 
             <div class="grid-row top_60 bottom_15">
