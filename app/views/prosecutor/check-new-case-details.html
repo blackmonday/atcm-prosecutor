@@ -35,12 +35,52 @@
             document.getElementById('companyTelephoneNumber').style.display = "none"
             document.getElementById('companyEmail').style.display = "none"
         }
+
+        if (document.getElementById('personsTitle2').innerText == "") {
+            document.getElementById('personsTitle2').innerText = "Not specified"
+        }
+        if (document.getElementById('dob2').innerText == "") {
+            document.getElementById('dob2').innerText = "Not specified"
+        }
+        if (document.getElementById('personsTelephoneNumber2').innerText == "") {
+            document.getElementById('personsTelephoneNumber2').innerText = "Not specified"
+        }
+        if (document.getElementById('personsMobile2').innerText == "") {
+            document.getElementById('personsMobile2').innerText = "Not specified"
+        }
+        if (document.getElementById('personsEmail2').innerText == "") {
+            document.getElementById('personsEmail2').innerText = "Not specified"
+        }
+        if (document.getElementById('companyTelephoneNumber2').innerText == "") {
+            document.getElementById('companyTelephoneNumber2').innerText = "Not specified"
+        }
+        if (document.getElementById('companyEmail2').innerText == "") {
+            document.getElementById('companyEmail2').innerText = "Not specified"
+        }
         
         
-                
-                
-                
-                
+        
+        
+        if (document.getElementById('companyAddressLine2').innerHTML == "<br>") {
+            document.getElementById('companyAddressLine2').style.display = "none"
+        }
+        if (document.getElementById('companyAddressLine3').innerHTML == "<br>") {
+            document.getElementById('companyAddressLine3').style.display = "none"
+        }
+        if (document.getElementById('companyAddressTown').innerHTML == "<br>") {
+            document.getElementById('companyAddressTown').style.display = "none"
+        }
+
+        if (document.getElementById('personsAddressLine2').innerHTML == "<br>") {
+            document.getElementById('personsAddressLine2').style.display = "none"
+        }
+        if (document.getElementById('personsAddressLine3').innerHTML == "<br>") {
+            document.getElementById('personsAddressLine3').style.display = "none"
+        }
+        if (document.getElementById('personsAddressTown').innerHTML == "<br>") {
+            document.getElementById('personsAddressTown').style.display = "none"
+        }
+                        
                 
 
     
@@ -202,7 +242,7 @@
                     <dt class="cya-question">
                         Title
                     </dt>
-                    <dd class="cya-answer">
+                    <dd class="cya-answer" id="personsTitle2">
                         {{ data['new-case-defendant-title'] }}
                     </dd>
                     <dd class="cya-change"></dd>
@@ -232,7 +272,7 @@
                     <dt class="cya-question">
                         Date of birth
                     </dt>
-                    <dd class="cya-answer">
+                    <dd class="cya-answer" id="dob2">
                         {{ data['new-case-defendant-dob'] }}
                     </dd>
                     <dd class="cya-change"></dd>
@@ -243,11 +283,11 @@
                         Address
                     </dt>
                     <dd class="cya-answer">
-                        {{ data['new-case-defendant-address-line-1'] }}<br>
-                        {{ data['new-case-defendant-address-line-2'] }}<br>
-                        {{ data['new-case-defendant-address-line-3'] }}<br>
-                        {{ data['new-case-defendant-town-or-city'] }}<br>
-                        {{ data['new-case-defendant-post-code'] }}<br>
+                        <span id="personsAddressLine1">{{ data['new-case-defendant-address-line-1'] }}<br></span>
+                        <span id="personsAddressLine2">{{ data['new-case-defendant-address-line-2'] }}<br></span>
+                        <span id="personsAddressLine3">{{ data['new-case-defendant-address-line-3'] }}<br></span>
+                        <span id="personsAddressTown">{{ data['new-case-defendant-town-or-city'] }}<br></span>
+                        <span id="personsAddressPostcode">{{ data['new-case-defendant-post-code'] }}</span>
                     </dd>
                     <dd class="cya-change"></dd>
                 </div>
@@ -257,11 +297,11 @@
                         Address
                     </dt>
                     <dd class="cya-answer">
-                        {{ data['new-case-company-address-line-1'] }}<br>
-                        {{ data['new-case-company-address-line-2'] }}<br>
-                        {{ data['new-case-company-address-line-3'] }}<br>
-                        {{ data['new-case-company-town-or-city'] }}<br>
-                        {{ data['new-case-company-post-code'] }}<br>
+                        <span id="companyAddressLine1">{{ data['new-case-company-address-line-1'] }}<br></span>
+                        <span id="companyAddressLine2">{{ data['new-case-company-address-line-2'] }}<br></span>
+                        <span id="companyAddressLine3">{{ data['new-case-company-address-line-3'] }}<br></span>
+                        <span id="companyAddressTown">{{ data['new-case-company-town-or-city'] }}<br></span>
+                        <span id="companyAddressPostcode">{{ data['new-case-company-post-code'] }}</span>
                     </dd>
                     <dd class="cya-change"></dd>
                 </div>
@@ -270,7 +310,7 @@
                     <dt class="cya-question">
                         Telephone number
                     </dt>
-                    <dd class="cya-answer">
+                    <dd class="cya-answer" id="personsTelephoneNumber2">
                         {{ data['new-case-defendant-telephone'] }}
                     </dd>
                     <dd class="cya-change"></dd>
@@ -279,7 +319,7 @@
                     <dt class="cya-question">
                         Telephone number
                     </dt>
-                    <dd class="cya-answer">
+                    <dd class="cya-answer" id="companyTelephoneNumber2">
                         {{ data['new-case-company-telephone'] }}
                     </dd>
                     <dd class="cya-change"></dd>
@@ -296,7 +336,7 @@
                     <dt class="cya-question">
                         Mobile
                     </dt>
-                    <dd class="cya-answer">
+                    <dd class="cya-answer" id="personsMobile2">
                         {{ data['new-case-defendant-mobile'] }}
                     </dd>
                     <dd class="cya-change"></dd>
@@ -313,7 +353,7 @@
                     <dt class="cya-question">
                         Email
                     </dt>
-                    <dd class="cya-answer">
+                    <dd class="cya-answer" id="personsEmail2">
                         {{ data['new-case-defendant-email'] }}
                     </dd>
                     <dd class="cya-change"></dd>
@@ -323,7 +363,7 @@
                     <dt class="cya-question">
                         Email
                     </dt>
-                    <dd class="cya-answer">
+                    <dd class="cya-answer" id="companyEmail2">
                         {{ data['new-case-company-email'] }}
                     </dd>
                     <dd class="cya-change"></dd>

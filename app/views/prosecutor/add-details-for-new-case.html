@@ -84,6 +84,7 @@
                         
                         <!-- NEW PERSON -->
                         <div class="panel panel-border-narrow js-hidden" id="new-person">
+                            <!--
                             <fieldset>
                                 <label class="form-label top_15" for="new-case-defendant-title"><span class="bold">Title</span></label>
                                 <select class="form-control" id="select-box" name="new-case-defendant-title">
@@ -94,9 +95,14 @@
                                     <option value="Miss">Miss</option>
                                 </select>
                             </fieldset>
-                
+                            -->
                             <fieldset class="top_15">
-                                <label class="form-label" for="new-case-defendant-first-names"><span class="bold">First names</span></label>
+                                <label class="form-label" for="new-case-defendant-title"><span class="bold">Title (optional)</span></label>
+                                <input class="form-control form-control-1-4" id="new-case-defendant-title" type="text" name="new-case-defendant-title" value="{{ data['new-case-defendant-title'] }}">
+                            </fieldset>
+                            
+                            <fieldset class="top_15">
+                                <label class="form-label" for="new-case-defendant-first-names"><span class="bold">Last name</span></label>
                                 <input class="form-control" id="new-case-defendant-first-names" type="text" name="new-case-defendant-first-names" value="{{ data['new-case-defendant-first-names'] }}">
                             </fieldset>
                             
