@@ -19,6 +19,12 @@
 <script>
 
     window.onload = function() {
+        
+        var defendantType = document.getElementById('defendantType').innerText;
+        if (defendantType == "Company") {
+            document.getElementById('title').style.display = "none";
+            document.getElementById('dob').style.display = "none";
+        }
     
         var date1Value = document.getElementById('date1').innerText;
         var date2Value = document.getElementById('date2').innerText;
@@ -168,13 +174,13 @@
                     <dt class="cya-question">
                         Defendant type
                     </dt>
-                    <dd class="cya-answer">
+                    <dd class="cya-answer" id="defendantType">
                         {{ data['new-case-defendant-type-group'] }}
                     </dd>
                     <dd class="cya-change"></dd>
                 </div>
                 
-                <div>
+                <div id="title">
                     <dt class="cya-question">
                         Title
                     </dt>
@@ -194,7 +200,7 @@
                     <dd class="cya-change"></dd>
                 </div>
                 
-                <div>
+                <div id="dob">
                     <dt class="cya-question">
                         Date of birth
                     </dt>

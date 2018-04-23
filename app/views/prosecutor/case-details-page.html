@@ -16,8 +16,10 @@
     window.onload = function() {
         
         var caseStatus = document.getElementById('caseStatus').innerText;
-        if (caseStatus = "No  plea received") {
+        if (caseStatus == "No  plea received") {
             document.getElementById("onlinePleaDocument").style.display = "none";
+        } else {
+            document.getElementById("onlinePleaDocument").style.display = "block";
         }
         
         if (document.getElementById('datesToAvoidTD').innerText == "") {

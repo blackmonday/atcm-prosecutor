@@ -25,7 +25,8 @@ router.post('/', function (req, res) {
         req.session.data['case-reference'] = "5160990"
         
         // Case details tab
-        req.session.data['case-status'] = "No plea received"
+        req.session.data['case-status'] = "Not guilty"
+        
         req.session.data['prosecutor'] = "TfL"
         req.session.data['notice-served'] = "4 March 2018"
         req.session.data['notice-served-short'] = "4 Mar 2018"
@@ -53,6 +54,8 @@ router.post('/', function (req, res) {
         req.session.data['offence-description'] = "On 10/06/2014 At grosvenor place SW1 Being a passenger on a Public Service Vehicle operated on behalf of London Bus Services Limited being used for the carriage of passengers at separate fares where the vehicle was being operated by a Driver without a Conductor did not immediately on boarding pay the fare to the Driver for the journey you intended to take."
         req.session.data['statement-of-facts'] = "I, Inspector Morse, was suspicious as the defendant kept moving seats away from me. When asked for a ticket he replied “I don’t have one as I am not really on this train, you’re seeing an illusion”. I had no choice but to issue him with a ticket."
         
+        req.session.data['new-case-offence-wording'] = "You have been charged with the following offence: That you, on 24 March 2018 at HIGH STREET, W3 Being a passenger on a Public Service Vehicle operated on behalf of London Bus Services Limited being used for the carriage of passengers at separate fares, did use in relation to the journey you were taking a ticket which had been issued for use by another person on terms that it is not transferable. Contrary to Regulation 7(1)(b) of the Public Service Vehicles (conduct of Drivers, Inspectors, Conductors & Passengers) Regulations 1990 SI No. 1020 and contrary to Section 25(3) of the Public Passenger Vehicles Act 1981."
+        
         //res.redirect('/prosecutor/case-details-page')
         res.redirect('/prosecutor/dashboard')
         
@@ -63,7 +66,7 @@ router.post('/', function (req, res) {
         req.session.data['case-reference'] = "5160990"
         
         // Case details tab
-        req.session.data['case-status'] = "No plea received"
+        req.session.data['case-status'] = "Guilty plea"
         req.session.data['prosecutor'] = "TV Licensing"
         req.session.data['notice-served'] = "4 March 2018"
         req.session.data['notice-served-short'] = "4 Mar 2018"
