@@ -93,7 +93,9 @@ router.post('/', function (req, res) {
         req.session.data['offence-title'] = "Possess/control TV set with intent another use install without a licence"
         req.session.data['offence-description'] = "On 01/11/2017 at Chelmsford in the county of Essex were in possession or control of a colour television receiver knowing, or having reasonable grounds for believing, that another person intended to install or use the receiver without a licence."
         req.session.data['statement-of-facts'] = "I, Inspector Morse, was suspicious as the defendant kept moving seats away from me. When asked for a ticket he replied “I don’t have one as I am not really on this train, you’re seeing an illusion”. I had no choice but to issue him with a ticket."
-                
+
+        req.session.data['new-case-offence-wording'] = "Lorem ipsum dolor sit amet."
+        
         res.redirect('/prosecutor/dashboard')
         
     }
