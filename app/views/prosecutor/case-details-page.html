@@ -15,6 +15,11 @@
 <script>
     window.onload = function() {
         
+        var caseStatus = document.getElementById('caseStatus').innerText;
+        if (caseStatus = "No  plea received") {
+            document.getElementById("onlinePleaDocument").style.display = "none";
+        }
+        
         if (document.getElementById('datesToAvoidTD').innerText == "") {
             //document.getElementById('datesToAvoidRow').style.display = "none"
         } else if (document.getElementById('datesToAvoidTD').innerText != "") {
@@ -71,7 +76,7 @@
                     <table class="top_10">
                         <tr>
                             <th class="bold" style="border: none">Case status</th>
-                            <td style="border: none">{{data['case-status']}}</td>
+                            <td style="border: none" id="caseStatus">{{data['case-status']}}</td>
                         </tr>
                         <tr>
                             <th class="bold" style="border: none">Prosecutor</th>
@@ -122,7 +127,7 @@
                         </tr>
                     </table>
                     
-                    <p id="nonActiveLink" class="top_15">Change personal details</p>
+                    <!--<p id="nonActiveLink" class="top_15">Change personal details</p>-->
                 </div>
                 
                 <!-- DOCUMENTS TAB -->
@@ -151,8 +156,10 @@
                     
                     <p id="nonActiveLink" class="top_15">Add documents</p>
 
-                    <h4 class="heading-medium bottom_10">Online plea</h4>
-                    <p id="nonActiveLink" class="top_15">Defendant's online plea</p>
+                    <div id="onlinePleaDocument">
+                        <h4 class="heading-medium bottom_10">Online plea</h4>
+                        <p id="nonActiveLink" class="top_15">Defendant's online plea</p>
+                    </div>
 
                 
                 
