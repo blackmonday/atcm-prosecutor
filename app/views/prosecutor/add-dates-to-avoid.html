@@ -13,7 +13,6 @@
 </style>
 
 <script>
-    
     window.onload = function() {
         
         removeThisRow = localStorage.getItem("removeRow");
@@ -22,8 +21,19 @@
             document.getElementById('addDatesToAvoidRow').style.display = "none"
         }
         
+        removeThisRow2 = localStorage.getItem("removeRow2");
+        
+        if (removeThisRow2 == "True") { 
+            document.getElementById('addDatesToAvoidRow2').style.display = "none";
+        }
+        
+        
+        if (document.getElementById('datesToAvoidCount').innerText == "1") {
+            document.getElementById('caseText').innerText = "case";
+        }
+        
     }
-    
+    sx    
 </script>
 
 <main id="content" role="main">
@@ -38,7 +48,7 @@
 
     <div class="grid-row">
         <div class="column-two-thirds">
-            <h1 class="heading-xlarge top_30 bottom_30">Review not guilty pleas ({{data['addDatesToAvoidCount']}} cases)</h1>
+            <h1 class="heading-xlarge top_30 bottom_30">Review not guilty pleas (<span id="datesToAvoidCount">{{data['addDatesToAvoidCount']}}</span> <span id="caseText">cases</span>)</h1>
             
             <div class="notice top_60 bottom_60">
                 <i class="icon icon-important" style="vertical-align: top">
@@ -66,16 +76,16 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th scope="row"><span style="text-decoration: underline; color: #005EA5">JONES Alex</span></th>
-                        <td>99 Alresford Rd, Winchester SO23 0JZ</td>
-                        <td>6389572</td>
-                        <td>15 Jul 1990</td>
+                    <tr id="addDatesToAvoidRow">
+                        <th scope="row"><a href="case-details-page-2.html">{{data['defendent-last-name-2']}} {{data['defendent-first-name-2']}}</a></th>
+                        <td>{{data['defendent-address-line-1-2']}}, {{data['defendent-address-line-2-2']}}, {{data['defendent-address-line-3-2']}}, {{data['defendent-address-town-or-city-2']}}, {{data['defendent-address-postcode-2']}}</td>
+                        <td>{{data['case-reference-2']}}</td>
+                        <td>{{data['defendent-dob-short-2']}}</td>
                         <td>{{data['plea-entry-short']}}</td>
                     </tr>
 
-                    <tr id="addDatesToAvoidRow">
-                        <th scope="row"><a href="case-details-page.html">{{data['defendent-last-name']}} {{data['defendent-first-name']}}</a></th>
+                    <tr id="addDatesToAvoidRow2">
+                        <th scope="row"><a href="case-details-page.html" onclick="whichPage()">{{data['defendent-last-name']}} {{data['defendent-first-name']}}</a></th>
                         <td>{{data['defendent-address-line-1']}}, {{data['defendent-address-line-2']}}, {{data['defendent-address-line-3']}}, {{data['defendent-address-town-or-city']}}, {{data['defendent-address-postcode']}}</td>
                         <td>{{data['case-reference']}}</td>
                         <td>{{data['defendent-dob-short']}}</td>
