@@ -72,7 +72,7 @@ router.post('/', function (req, res) {
 
         // Personal details tab
         req.session.data['defendent-first-name-2'] = "Alex"
-        req.session.data['defendent-last-name-2'] = "JONES"
+        req.session.data['defendent-last-name-2'] = "HAMMOND"
         req.session.data['defendent-dob-2'] = "17 August 1974"
         req.session.data['defendent-dob-short-2'] = "17 Aug 1974"
         req.session.data['defendent-age-2'] = "44"
