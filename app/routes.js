@@ -134,6 +134,45 @@ router.post('/', function (req, res) {
         req.session.data['new-case-offence-wording'] = "Lorem ipsum dolor sit amet."
         
         res.redirect('/prosecutor/dashboard')
+                
+    } else if (prosecutor == "DVLA") {
+        
+        // *************
+        //CASE DETAILS 1
+        req.session.data['case-reference'] = "5160990"
+        
+        // Case details tab
+        req.session.data['case-status'] = "Guilty plea"
+        req.session.data['prosecutor'] = "DVLA"
+        req.session.data['notice-served'] = "4 March 2018"
+        req.session.data['notice-served-short'] = "4 Mar 2018"
+        req.session.data['plea-entry'] = "30 April 2018"
+        req.session.data['plea-entry-short'] = "30 Apr 2018"
+        
+        // Personal details tab
+        req.session.data['defendent-first-name'] = "Camilla"
+        req.session.data['defendent-last-name'] = "JONES"
+        req.session.data['defendent-dob'] = "4 January 1968"
+        req.session.data['defendent-dob-short'] = "4 Jan 1968"
+        req.session.data['defendent-age'] = "50"
+        req.session.data['defendent-address-line-1'] = "307A Seven Sisters Rd"
+        req.session.data['defendent-address-line-2'] = "Harringay"
+        req.session.data['defendent-address-line-3'] = ""
+        req.session.data['defendent-address-town-or-city'] = "London"
+        req.session.data['defendent-address-postcode'] = "N4 1QR"
+        req.session.data['defendent-email'] = "camilla.jones@hotmail.com"
+        req.session.data['defendent-home-telephone'] = ""
+        req.session.data['defendent-mobile'] = "08771539837"
+        req.session.data['defendent-nin'] = "BN 65 12 45 D"
+
+        //Offence details
+        req.session.data['offence-title'] = "Keep a vehicle without a vehicle license"
+        req.session.data['offence-description'] = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatuR."
+        req.session.data['statement-of-facts'] = "Eiusmod tempor orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+
+        req.session.data['new-case-offence-wording'] = "Lorem ipsum dolor sit amet."
+        
+        res.redirect('/prosecutor/dashboard')
         
     }
         
