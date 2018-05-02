@@ -32,8 +32,36 @@
             document.getElementById('caseText').innerText = "case";
         }
         
+        if (document.getElementById('datesToAvoidCount').innerText == "0") {
+            document.getElementById('listOfCasesToReview').style.display = "none";
+            document.getElementById('warningText').innerText = "There are no cases to review";
+        }
+        
+        var addressLine3 = document.getElementById('addressLine3').innerText;
+        var addressLine3_2 = document.getElementById('addressLine3_2').innerText;
+        
+        if (addressLine3 = ", ") {
+            document.getElementById('addressLine3').style.display = "none";
+        }
+        if (addressLine3_2 = ", ") {
+            document.getElementById('addressLine3_2').style.display = "none";
+        }
+        
+        
+        //addressLine1
+        //addressLine2
+        //addressLine3
+        //addressTown
+        //addressPostcode
+        
+        //addressLine1_2
+        //addressLine2_2
+        //addressLine3_2
+        //addressTown_2
+        //addressPostcode_2
+        
     }
-    sx    
+     
 </script>
 
 <main id="content" role="main">
@@ -54,7 +82,7 @@
                 <i class="icon icon-important" style="vertical-align: top">
                     <span class="visually-hidden">Warning</span>
                 </i>
-                <strong class="bold-small">
+                <strong class="bold-small" id="warningText">
                     These cases will be reviewed by a legal adviser after you have sent your dates to avoid or after 10 working days from plea entry whichever is sooner.
                 </strong>
             </div>
@@ -65,7 +93,7 @@
     <div class="grid-row">
         <div class="column-full">
             
-            <table>
+            <table id="listOfCasesToReview">
                 <thead>
                     <tr>
                         <th scope="col" style="width:175px">Name</th>
@@ -78,20 +106,22 @@
                 <tbody>
                     <tr id="addDatesToAvoidRow">
                         <th scope="row"><a href="case-details-page-2.html">{{data['defendent-last-name-2']}} {{data['defendent-first-name-2']}}</a></th>
-                        <td>{{data['defendent-address-line-1-2']}}, {{data['defendent-address-line-2-2']}}, {{data['defendent-address-line-3-2']}}, {{data['defendent-address-town-or-city-2']}}, {{data['defendent-address-postcode-2']}}</td>
+                        <td><span id="addressLine1_2">{{data['defendent-address-line-1-2']}}, </span><span id="addressLine2_2">{{data['defendent-address-line-2-2']}}, </span><span id="addressLine3_2">{{data['defendent-address-line-3-2']}}, </span><span id="addressTown_2">{{data['defendent-address-town-or-city-2']}}, </span><span id="addressPostcode_2">{{data['defendent-address-postcode-2']}}</span></td>
                         <td>{{data['case-reference-2']}}</td>
                         <td>{{data['defendent-dob-short-2']}}</td>
                         <td>{{data['plea-entry-short']}}</td>
                     </tr>
 
                     <tr id="addDatesToAvoidRow2">
-                        <th scope="row"><a href="case-details-page.html" onclick="whichPage()">{{data['defendent-last-name']}} {{data['defendent-first-name']}}</a></th>
-                        <td>{{data['defendent-address-line-1']}}, {{data['defendent-address-line-2']}}, {{data['defendent-address-line-3']}}, {{data['defendent-address-town-or-city']}}, {{data['defendent-address-postcode']}}</td>
+                        <!--<th scope="row"><a href="case-details-page.html" onclick="whichPage()">{{data['defendent-last-name']}} {{data['defendent-first-name']}}</a></th>-->
+                        <th scope="row"><a href="case-details-page.html">{{data['defendent-last-name']}} {{data['defendent-first-name']}}</a></th>
+                        <td><span id="addressLine1">{{data['defendent-address-line-1']}}, </span><span id="addressLine2">{{data['defendent-address-line-2']}}, </span><span id="addressLine3">{{data['defendent-address-line-3']}}, </span><span id="addressTown">{{data['defendent-address-town-or-city']}}, </span><span id="addressPostcode">{{data['defendent-address-postcode']}}</span></td>
                         <td>{{data['case-reference']}}</td>
                         <td>{{data['defendent-dob-short']}}</td>
                         <td>{{data['plea-entry-short']}}</td>
                     </tr>
 
+                    <!--
                     <tr>
                         <th scope="row"><span style="text-decoration: underline; color: #005EA5">SMITH-KEEN Michael </span></th>
                         <td>90 Coombe Rd, New Malden KT3 4R</td>
@@ -99,10 +129,11 @@
                         <td>21 Sep 1986</td>
                         <td>{{data['plea-entry-short']}}</td>
                     </tr>
+                    -->
                 </tbody>
             </table>
 
-            <p class="top_30"><a href="javascript:history.go(-1);">Back</a></p>
+            <p class="top_30"><a href="dashboard.html">Back to dashboard</a></p>
 
         </div>
     </div>
