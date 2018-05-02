@@ -554,3 +554,17 @@ button .disabled {
     line-height: 36px;
     font-weight: bold;
 }
+
+
+
+
+
+
+
+/* CPP buttons */
+.button-secondary {
+    @include button($grey-3);
+}
+.button-tertiary {
+    @include button($red);
+}

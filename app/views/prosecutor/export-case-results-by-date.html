@@ -1,0 +1,117 @@
+{% extends "layout-CPP.html" %}
+
+{% block page_title %}
+    GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+<style>
+</style>
+
+<script>
+    window.onload = function() {
+    }
+    
+    function readyToDownload() {
+        document.getElementById('searchComplete').style.display = "block";
+    }
+    
+    function downloadFile() {
+        alert('download file');
+    }
+</script>
+
+<main id="content" role="main">
+    
+    <div class="grid-row">
+        <div class="column-full">
+            <!-- Alpha phase banner -->
+            {% include "includes/phase_banner_alpha.html" %}
+            {% include "includes/breadcrumb_back.html" %}
+        </div>
+    </div>
+
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            <h1 class="heading-xlarge top_30 bottom_30">Export case results by date</h1>
+         </div>
+    </div>
+
+    <div class="grid-row">
+        <div class="column-two-thirds">
+
+            <form class="form" action="" method="post">
+                <div class="form-group">
+                    
+                    <!-- Date picker - from -->
+                    <fieldset>
+                        <legend>
+                            <span class="form-label-bold">From</span>
+                            <span class="form-hint">For example, 31 3 1980</span>
+                        </legend>
+                        <div class="form-date">
+                            <div class="form-group form-group-day">
+                                <label class="form-label" for="day-from">Day</label>
+                                <input class="form-control" id="day-from" name="day-from" type="number" pattern="[0-9]*" value="{{ data['day-from'] }}">
+                            </div>
+                            <div class="form-group form-group-month">
+                                <label class="form-label" for="month-from">Month</label>
+                                <input class="form-control" id="month-from" name="month-from" type="number" pattern="[0-9]*" value="{{ data['month-from'] }}">
+                            </div>
+                            <div class="form-group form-group-year">
+                                <label class="form-label" for="year-from">Year</label>
+                                <input class="form-control" id="year-from" name="year-from" type="number" pattern="[0-9]*" value="{{ data['year-from'] }}">
+                            </div>
+                        </div>
+                    </fieldset>
+                    
+                    <!-- Date picker - to -->
+                    <fieldset class="top_30">
+                        <legend>
+                            <span class="form-label-bold">To</span>
+                            <span class="form-hint">For example, 31 3 1980</span>
+                        </legend>
+                        <div class="form-date">
+                            <div class="form-group form-group-day">
+                                <label class="form-label" for="day-to">Day</label>
+                                <input class="form-control" id="day-to" name="day-to" type="number" pattern="[0-9]*" value="{{ data['day-to'] }}">
+                            </div>
+                            <div class="form-group form-group-month">
+                                <label class="form-label" for="month-to">Month</label>
+                                <input class="form-control" id="month-to" name="month-to" type="number" pattern="[0-9]*" value="{{ data['month-to'] }}">
+                            </div>
+                            <div class="form-group form-group-year">
+                                <label class="form-label" for="year-to">Year</label>
+                                <input class="form-control" id="year-to" name="year-to" type="number" pattern="[0-9]*" value="{{ data['year-to'] }}">
+                            </div>
+                        </div>
+                    </fieldset>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <p class="top_30" id="searchButton"><input class="button" type="" value="Search"  onClick="readyToDownload()" style="width:87px; color: transparent; text-shadow: 0 0 0 #fff;"></p>
+                    
+                    <div id="searchComplete" style="display: none">
+                        <div class="panel panel-border-wide">
+                            <p>20 cases found</p>
+                        </div>
+                        <p class="top_30" id="downloadButton"><input class="button-secondary" type="" value="Download results in CSV file" onclick="downloadFile()" style="width:230px; color: transparent; text-shadow: 0 0 0 #0B0C0C;"></p>
+                    </div>
+                    
+                    <p class="top_15"><a href="javascript:history.go(-1);">Cancel</a></p>
+                    
+                </div>
+            </form>
+
+        </div>
+    </div>
+</main>
+
+{% endblock %}
+
+
