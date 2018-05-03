@@ -1,0 +1,128 @@
+{% extends "layout-CPP.html" %}
+
+{% block page_title %}
+    GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+    
+    
+    
+    
+    
+    
+    
+    .search-container button {
+        /*padding: 8px 11px 7px 11px;*/
+        padding-top:6px;
+        padding-bottom:33px;
+        border-radius: 0;
+        margin-left: -39px;
+        margin-top: 8px;
+        margin-right: 16px;
+        background: #005EA5;
+        color: #fff;
+        font-size: 20px;
+        border: none;
+        cursor: pointer;
+    }
+
+    .search-container button:hover {
+        background: #2B8CC4;
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+</style>
+
+<script>
+    
+    window.onload = function() {
+                
+    }
+     
+</script>
+
+<main id="content" role="main">
+    
+    <div class="grid-row">
+        <div class="column-full">
+            <!-- Alpha phase banner -->
+            {% include "includes/phase_banner_alpha.html" %}
+            {% include "includes/breadcrumb_back.html" %}
+        </div>
+    </div>
+
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            <h1 class="heading-xlarge top_30 bottom_30">Search for an offence to withdraw</h1>
+        </div>
+    </div>
+
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            
+            <div class="search-container">
+                <p class="top_0 bottom_0">Enter case reference number or defendant's last name</p>
+                <input class="form-control form-control-3-4" id="full-name-f1" type="text" name="full-name-f1" value="Smith"><button type="submit"><i class="fa fa-search" style="margin-top: 2px"></i></button>
+                <div class="panel panel-border-wide top_15" style="padding-top: 10px; padding-bottom: 5px">
+                    <p>
+                        2 cases found
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+    <div class="grid-row">
+        <div class="column-full">
+
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Reference number</th>
+                        <th scope="col">Date of birth</th>
+                        <th scope="col">Case status</th>
+                        <th scope="col">Notice served</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row"><span id="fakeLink">SMITH Billy</span></th>
+                        <td>123456789</td>
+                        <td>19 Oct 1972</td>
+                        <td>Awaiting plea</td>
+                        <td>30 April 2018</td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><span id="fakeLink">SMITH Mary</span></th>
+                        <td>987654321</td>
+                        <td>3 May 1983</td>
+                        <td>Pending offence withdrawal</td>
+                        <td>15 April 2018</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <p class="top_30"><a href="javascript:history.go(-1);">Back</a></p>
+            
+        </div>
+    </div>
+    
+</main>
+
+{% endblock %}
+
+

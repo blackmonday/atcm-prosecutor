@@ -1,0 +1,50 @@
+{% extends "layout-CPP.html" %}
+
+{% block page_title %}
+    GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+<style>
+</style>
+
+<script>
+    
+    window.onload = function() {
+                
+    }
+     
+</script>
+
+<main id="content" role="main">
+    
+    <div class="grid-row">
+        <div class="column-full">
+            <!-- Alpha phase banner -->
+            {% include "includes/phase_banner_alpha.html" %}
+            {% include "includes/breadcrumb_back.html" %}
+        </div>
+    </div>
+
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            <h1 class="heading-xlarge top_30 bottom_30">Withdraw an offence</h1>
+        </div>
+    </div>
+
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            
+            <p>You can ask a legal adviser to withdraw this offence. Are you sure you want to do this?</p>
+            
+            <p class="top_30"><input class="button" type="submit" value="Yes - send request"></p>
+            <p class="top_15"><a href="javascript:history.go(-1);">Cancel</a></p>
+
+        </div>
+    </div>
+</main>
+
+{% endblock %}
+
+

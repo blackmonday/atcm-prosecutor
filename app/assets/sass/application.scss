@@ -568,3 +568,19 @@ button .disabled {
 .button-tertiary {
     @include button($red);
 }
+
+
+
+
+
+
+
+/* FAKE  LINK */
+#fakeLink {
+    text-decoration: underline;
+    color: #005EA5;
+    cursor:pointer;
+}
+#fakeLink:hover {
+    color: #2B8CC4;
+}

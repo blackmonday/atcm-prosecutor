@@ -29,16 +29,26 @@
         countDown = document.getElementById("countDown").textContent;
         countDownNumber = parseInt(countDown)-1;
         document.getElementById("countDown").textContent = countDownNumber;
-
+        
+        if (countDownNumber == "0") {
+            document.getElementById('listOfCases').style.display = "none";
+        }
+        
         document.getElementById("row1").style.display = "none";
     }
     function removeRow2() {
         countDown = document.getElementById("countDown").textContent;
         countDownNumber = parseInt(countDown)-1;
         document.getElementById("countDown").textContent = countDownNumber;
+        
+        if (countDownNumber == "0") {
+            document.getElementById('listOfCases').style.display = "none";
+        }
 
         document.getElementById("row2").style.display = "none";
     }
+    
+    /*
     function removeRow3() {
         countDown = document.getElementById("countDown").textContent;
         countDownNumber = parseInt(countDown)-1;
@@ -249,6 +259,7 @@
 
         document.getElementById("row32").style.display = "none";
     }
+    */
     
 </script>
 
@@ -268,7 +279,7 @@
             <h1 class="heading-xlarge top_30 bottom_30">Defendants details updated</h1>
             
             <div class="panel panel-border-wide">
-                <p><span id="countDown">32</span> cases have been updated</p>
+                <p><span id="countDown">{{data['defendantDetailsUpdated']}}</span> cases have been updated</p>
             </div>
                         
          </div>
@@ -277,7 +288,7 @@
     <div class="grid-row">
         <div class="column-full">
 
-           <table>
+           <table id="listOfCases">
                 <thead>
                     <tr>
                         <th scope="col">Name</th>
@@ -308,6 +319,7 @@
                         <td class="remove-link" onclick="removeRow2()">Remove</td>
                     </tr>
                     
+                    <!--
                     <tr id="row3">
                         <th scope="row"><a href="billy-smith.html" title="View cases">GREENBERG David</a></th>
                         <td>0941426</td>
@@ -557,6 +569,8 @@
                         <td>19 Jan 2018</td>
                         <td class="remove-link" onclick="removeRow32()">Remove</td>
                     </tr>
+                    -->
+                    
                </tbody>
             </table>
             

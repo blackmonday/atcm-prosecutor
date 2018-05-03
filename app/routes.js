@@ -17,6 +17,7 @@ router.post('/', function (req, res) {
     var prosecutor = req.session.data['prosecutor-group']
     
     req.session.data['addDatesToAvoidCount'] = "2"
+    req.session.data['defendantDetailsUpdated'] = "2"
     req.session.data['whichPage'] = "Not yet specified"
 
     if (prosecutor == "TfL") {
@@ -256,7 +257,9 @@ router.post('/prosecutor/dashboard', function (req, res) {
 
 // *************************
 // Defendant details updated
-router.post('/prosecutor/defendant-details-updated', function (req, res) {
+router.post('/prosecutor/defendant-details-updated-3', function (req, res) {
+    
+    req.session.data['defendantDetailsUpdated'] = "0"
 
     res.redirect('/prosecutor/dashboard')
     
@@ -336,5 +339,15 @@ router.post('/prosecutor/check-new-case-details', function (req, res) {
 router.post('/prosecutor/create-a-new-case-confirmation', function (req, res) {
 
     res.redirect('/prosecutor/upload-files-for-new-case')
+    
+})
+
+// ******************************
+// Withdaw an offence
+router.post('/prosecutor/withdraw-an-offence', function (req, res) {
+
+    //req.session.data['hasCaseBeenWithdrawn'] = "True"
+    
+    res.redirect('/prosecutor/case-details-page')
     
 })

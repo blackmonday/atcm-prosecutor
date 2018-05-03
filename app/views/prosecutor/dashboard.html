@@ -22,10 +22,52 @@
             document.getElementById('tflContent').style.display = "none"
         }
         
-        var howManyCasesToReview = document.getElementById('howManyCasesToReview').innerHTML;
+        
+        
+        
+        
+        
+        /* REVIEW NOT GUILTY CASES */
+        var howManyCasesToReview = document.getElementById('howManyCasesToReview_1').innerHTML;
         if (howManyCasesToReview == "0") {
-            document.getElementById('addDatesToAvoidGroup1').style.display = "none";
-            document.getElementById('addDatesToAvoidGroup2').style.display = "block";
+            document.getElementById('addDatesToAvoidGroup1_1').style.display = "none";
+            document.getElementById('addDatesToAvoidGroup2_1').style.display = "block";
+        }
+        
+        var howManyCasesToReview = document.getElementById('howManyCasesToReview_2').innerHTML;
+        if (howManyCasesToReview == "0") {
+            document.getElementById('addDatesToAvoidGroup1_2').style.display = "none";
+            document.getElementById('addDatesToAvoidGroup2_2').style.display = "block";
+        }
+        
+        var howManyCasesToReview = document.getElementById('howManyCasesToReview_3').innerHTML;
+        if (howManyCasesToReview == "0") {
+            document.getElementById('addDatesToAvoidGroup1_3').style.display = "none";
+            document.getElementById('addDatesToAvoidGroup2_3').style.display = "block";
+        }
+        
+        
+        
+        
+        
+        
+        /* DEFENDANTS DETAILS UPDATED */
+        var defendantDetailsUpdatedCount = document.getElementById('defendantDetailsUpdatedCount_1').innerHTML;
+        if (defendantDetailsUpdatedCount == "0") {
+            document.getElementById('defendantDetailsUpdatedContainer_1').style.display = "none";
+            document.getElementById('defendantDetailsUpdatedContainer2_1').style.display = "block";
+        }
+
+        var defendantDetailsUpdatedCount = document.getElementById('defendantDetailsUpdatedCount_2').innerHTML;
+        if (defendantDetailsUpdatedCount == "0") {
+            document.getElementById('defendantDetailsUpdatedContainer_2').style.display = "none";
+            document.getElementById('defendantDetailsUpdatedContainer2_2').style.display = "block";
+        }
+
+        var defendantDetailsUpdatedCount = document.getElementById('defendantDetailsUpdatedCount_3').innerHTML;
+        if (defendantDetailsUpdatedCount == "0") {
+            document.getElementById('defendantDetailsUpdatedContainer_3').style.display = "none";
+            document.getElementById('defendantDetailsUpdatedContainer2_3').style.display = "block";
         }
 
     }
@@ -113,13 +155,18 @@
 
                    <h2 class="heading-medium top_30">Other tasks</h2> 
 
-                    <!-- Link one -->
+                <!-- Link one -->
+                <div id="addDatesToAvoidGroup1_1">
                     <div style="float: left">
                         <img src="/public/images/alert-icon-black.svg" style="height: 23px; padding-right: 5px">
                     </div>
                     <div>
-                        <a href="add-dates-to-avoid.html" title="" style="text-decoration: none"><span class="bold" style="text-decoration: underline">Review not guilty pleas</span><span class="bold"> ({{data['addDatesToAvoidCount']}})</span></a>
+                        <a href="add-dates-to-avoid.html" title="" style="text-decoration: none"><span class="bold" style="text-decoration: underline">Review not guilty pleas</span><span class="bold"> (<span id="howManyCasesToReview_1">{{data['addDatesToAvoidCount']}}</span>)</span></a>
                     </div>
+                </div>
+                <div id="addDatesToAvoidGroup2_1" class="form-hint" style="display: none">
+                    Review not guilty pleas (0)
+                </div>
                     <!--
                     <div>
                         <img src="/public/images/alert-icon-black.svg" style="height: 23px; padding-left: 5px">
@@ -127,10 +174,12 @@
                     -->
 
                     <!-- Link two -->
-                    <p class="top_20"><a href="defendant-details-updated.html" title="" style="text-decoration: none"><span style="text-decoration: underline">Defendant details updated</span><span class="bold"> (2)</span></a></p>
+                    <p class="top_20" id="defendantDetailsUpdatedContainer_1"><a href="defendant-details-updated-3.html" title="" style="text-decoration: none"><span style="text-decoration: underline">Defendant details updated</span><span class="bold"> (<span id="defendantDetailsUpdatedCount_1">{{data['defendantDetailsUpdated']}}</span>)</span></a></p>
+                    <!-- Link two - inactive -->
+                    <p class="top_20" id="defendantDetailsUpdatedContainer2_1" style="display:none; color: #6F777B">Defendant details updated (0)</p>
 
                     <!-- Link three -->
-                    <p id="nonActiveLink">Withdraw an offence</p>
+                    <p><a href="withdraw-an-offence-search.html">Withdraw an offence</a></p>
 
                     <!-- Link four -->
                     <p><a href="export-case-results-by-date.html" title="">Export case results by date</a></p>
@@ -150,11 +199,16 @@
                 <h2 class="heading-medium">Other tasks</h2> 
 
                 <!-- Link one -->
-                <div style="float: left">
-                    <img src="/public/images/alert-icon-black.svg" style="height: 23px; padding-right: 5px">
+                <div id="addDatesToAvoidGroup1_2">
+                    <div style="float: left">
+                        <img src="/public/images/alert-icon-black.svg" style="height: 23px; padding-right: 5px">
+                    </div>
+                    <div>
+                        <a href="add-dates-to-avoid.html" title="" style="text-decoration: none"><span class="bold" style="text-decoration: underline">Review not guilty pleas</span><span class="bold"> (<span id="howManyCasesToReview_2">{{data['addDatesToAvoidCount']}}</span>)</span></a>
+                    </div>
                 </div>
-                <div>
-                    <a href="add-dates-to-avoid.html" title="" style="text-decoration: none"><span class="bold" style="text-decoration: underline">Review not guilty pleas</span><span class="bold"> ({{data['addDatesToAvoidCount']}})</span></a>
+                <div id="addDatesToAvoidGroup2_2" class="form-hint" style="display: none">
+                    Review not guilty pleas (0)
                 </div>
                 <!--
                 <div>
@@ -163,10 +217,12 @@
                 -->
 
                 <!-- Link two -->
-                <p class="top_20"><a href="defendant-details-updated.html" title="" style="text-decoration: none"><span style="text-decoration: underline">Defendant details updated</span><span class="bold"> (2)</span></a></p>
+                <p class="top_20" id="defendantDetailsUpdatedContainer_2"><a href="defendant-details-updated-3.html" title="" style="text-decoration: none"><span style="text-decoration: underline">Defendant details updated</span><span class="bold"> (<span id="defendantDetailsUpdatedCount_2">{{data['defendantDetailsUpdated']}}</span>)</span></a></p>
+                <!-- Link two - inactive -->
+                <p class="top_20" id="defendantDetailsUpdatedContainer2_2" style="display:none; color: #6F777B">Defendant details updated (0)</p>
 
                 <!-- Link three -->
-                <p id="nonActiveLink">Withdraw an offence</p>
+                    <p><a href="withdraw-an-offence-search.html">Withdraw an offence</a></p>
 
                 <!-- Link four -->
                 <p><a href="export-case-results-by-date.html" title="">Export case results by date</a></p>
@@ -186,15 +242,15 @@
                 <h2 class="heading-medium">Other tasks</h2> 
 
                 <!-- Link one -->
-                <div id="addDatesToAvoidGroup1">
+                <div id="addDatesToAvoidGroup1_3">
                     <div style="float: left">
                         <img src="/public/images/alert-icon-black.svg" style="height: 23px; padding-right: 5px">
                     </div>
                     <div>
-                        <a href="add-dates-to-avoid.html" title="" style="text-decoration: none"><span class="bold" style="text-decoration: underline">Review not guilty pleas</span><span class="bold"> (<span id="howManyCasesToReview">{{data['addDatesToAvoidCount']}}</span>)</span></a>
+                        <a href="add-dates-to-avoid.html" title="" style="text-decoration: none"><span class="bold" style="text-decoration: underline">Review not guilty pleas</span><span class="bold"> (<span id="howManyCasesToReview_3">{{data['addDatesToAvoidCount']}}</span>)</span></a>
                     </div>
                 </div>
-                <div id="addDatesToAvoidGroup2" class="form-hint" style="display: none">
+                <div id="addDatesToAvoidGroup2_3" class="form-hint" style="display: none">
                     Review not guilty pleas (0)
                 </div>
                 <!--
@@ -204,10 +260,12 @@
                 -->
 
                 <!-- Link two -->
-                <p class="top_20"><a href="defendant-details-updated.html" title="" style="text-decoration: none"><span style="text-decoration: underline">Defendant details updated</span><span class="bold"> (2)</span></a></p>
+                <p class="top_20" id="defendantDetailsUpdatedContainer_3"><a href="defendant-details-updated-3.html" title="" style="text-decoration: none"><span style="text-decoration: underline">Defendant details updated</span><span class="bold"> (<span id="defendantDetailsUpdatedCount_3">{{data['defendantDetailsUpdated']}}</span>)</span></a></p>
+                <!-- Link two - inactive -->
+                <p class="top_20" id="defendantDetailsUpdatedContainer2_3" style="display:none; color: #6F777B">Defendant details updated (0)</p>
 
                 <!-- Link three -->
-                <p id="nonActiveLink">Withdraw an offence</p>
+                    <p><a href="withdraw-an-offence-search.html">Withdraw an offence</a></p>
 
                 <!-- Link four -->
                 <p><a href="export-case-results-by-date.html" title="">Export case results by date</a></p>
