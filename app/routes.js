@@ -367,10 +367,18 @@ router.post('/prosecutor/withdraw-an-offence', function (req, res) {
     
 })
 
-// ******************************
-// Withdaw an offence
+// ************************
+// Defendants online plea 1
 router.post('/prosecutor/defendants-online-plea', function (req, res) {
     
     res.redirect('/prosecutor/case-details-page')
+    
+})
+
+// ************************
+// Defendants online plea 2
+router.post('/prosecutor/defendants-online-plea-2', function (req, res) {
+    
+    res.redirect('/prosecutor/case-details-page-2')
     
 })
