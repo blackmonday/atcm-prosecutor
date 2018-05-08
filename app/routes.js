@@ -108,7 +108,7 @@ router.post('/', function (req, res) {
         req.session.data['case-reference'] = "5160990"
         
         // Case details tab
-        req.session.data['case-status'] = "Guilty plea"
+        req.session.data['case-status'] = "Not guilty"
         req.session.data['defendent-plea'] = "Not guilty"
         req.session.data['prosecutor'] = "TV Licensing"
         req.session.data['notice-served'] = "4 March 2018"
@@ -187,7 +187,7 @@ router.post('/', function (req, res) {
         req.session.data['case-reference'] = "5160990"
 
         // Case details tab
-        req.session.data['case-status'] = "Guilty plea"
+        req.session.data['case-status'] = "Not guilty"
         req.session.data['defendent-plea'] = "Not guilty"
         req.session.data['prosecutor'] = "DVLA"
         req.session.data['notice-served'] = "4 March 2018"
