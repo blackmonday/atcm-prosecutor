@@ -28,6 +28,14 @@
         //    document.getElementById('addDatesToAvoidLink').style.display = "none"
         //    document.getElementById('addDatesToAvoidLink2').style.display = "none"
         //}
+        
+        
+        
+        var hasCaseBeenWithdrawn = document.getElementById('hasCaseBeenWithdrawn').innerHTML;
+        if (hasCaseBeenWithdrawn == "True") {
+            document.getElementById('caseWithdrawn').style.display = "block";
+            document.getElementById('withdrawOfficeLink').style.display = "none";
+        }
 
     }
 </script>
@@ -46,8 +54,13 @@
             
             
             
-            
-            <p>has case been withdrawn? {{data['hasCaseBeenWithdrawn']}}</p>
+            <div id="caseWithdrawn" class="confirmation-banner" style="display: none">
+                <div class="confirmation-banner-tick">
+                    <img src="/public/images/confirmation-banner-tick-icon.png">
+                </div>
+                <div class="confirmation-banner-text top_10">Your request has been sent and will be dealt with by a legal adviser</div>
+            </div>
+            <p id="hasCaseBeenWithdrawn" style="display: none">{{data['hasCaseBeenWithdrawn']}}</p>
 
             
             
@@ -194,7 +207,7 @@
             <div class="right-column-nav">
                 <hr class="bold-hr">
                 <h3 class="heading-medium">Case options</h3>
-                <p><a href="withdraw-an-offence.html">Withdraw offence</a></p>
+                <p id="withdrawOfficeLink"><a href="withdraw-an-offence.html">Withdraw offence</a></p>
                 <p id="addDatesToAvoidLink"><a href="dates-to-avoid-2.html">Add dates to avoid</a></p>
             </div>
         </div>

@@ -24,13 +24,21 @@
             <p class="top_15 bottom_0 font-xsmall form-hint">This prototype uses the GOV.UK prototype kit {{releaseVersion}}</p>
             
             <h2 class="top_60 bottom_10 heading-medium">What does this prototype include?</h2>
+            <p class="heading-small">All prosecutors</p>
             <ul class="list list-bullet">
                 <ul class="list list-bullet bottom_0">
                     <li>Search for 'Jones' <span style="color:#6F777B">- Any other text will result in the same search results</span></li>
                     <li>Review not guilty cases <span style="color:#6F777B">- In this order, remove "Camilla JONES" then remove "Alex HAMMOND" for the flow to work correctly</span></li>
                     <li>Defendant details updated <span style="color:#6F777B">- Remove both cases for the flow to work correctly</span></li>
                     <li>Export case results by date</li>
-                    <li>Withdraw an offence <span style="color:#f00">(!) Partially implemented</span></li>
+                    <li>Withdraw an offence <span style="color:#6F777B">- Search for 'Jones' then follow the flow to withdraw her case</span></li>
+                </ul>
+            </ul>
+            
+            <p class="heading-small">TfL only</p>
+            <ul class="list list-bullet">
+                <ul class="list list-bullet bottom_0">
+                    <li>Manually create a new case <span style="color:#6F777B">- After the confirmation this case is not actually added</span></li>
                 </ul>
             </ul>
             
@@ -39,7 +47,7 @@
                     
                     <fieldset class="bottom_15">
                         <legend>
-                            <h2 class="heading-medium bottom_10">Choose a prosecutor</h2>
+                            <h2 class="heading-medium bottom_10">Choose a prosecutor to start the prototype</h2>
                         </legend>
                         <div class="multiple-choice">
                             <input id="radio-1" type="radio" name="prosecutor-group" value="TfL">
@@ -51,7 +59,7 @@
                         </div>
                         <div class="multiple-choice">
                             <input id="radio-3" type="radio" name="prosecutor-group" value="DVLA">
-                            <label for="radio-3">DVLA <span style="color:#f00">(!) work in progress</span></label>
+                            <label for="radio-3">DVLA</label>
                         </div>
                     </fieldset>
                     
@@ -62,23 +70,6 @@
                 </div>
             </form>
 
-            <p class="heading-medium top_60 bottom_15">This design demo currently includes the following</p>
-            
-            <p class="heading-small top_15 bottom_5">Search for a case</p>
-            <ul class="list list-bullet bottom_0">
-                <li>You can add any file - on the check your answers page it will always show details for a 'SJP notice' file</li>
-
-                <li>For example, use 'Jones' or '5160990'</li>
-            </ul>
-                                  
-            <p class="heading-small top_15 bottom_15">Review not guilty pleas</p>
-            
-            <p class="heading-small top_15 bottom_5">Manually create a new case</p>
-            <ul class="list list-bullet">
-                <ul class="list list-bullet bottom_0">
-                    <li>After the confirmation this case is not actually added</li>
-                </ul>
-            </ul>
         </div>
     </div>
 </main>

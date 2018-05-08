@@ -346,7 +346,7 @@ router.post('/prosecutor/create-a-new-case-confirmation', function (req, res) {
 // Withdaw an offence
 router.post('/prosecutor/withdraw-an-offence', function (req, res) {
 
-    //req.session.data['hasCaseBeenWithdrawn'] = "True"
+    req.session.data['hasCaseBeenWithdrawn'] = "True"
     
     res.redirect('/prosecutor/case-details-page')
     
