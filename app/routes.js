@@ -28,7 +28,7 @@ router.post('/', function (req, res) {
         
         // Case details tab
         req.session.data['case-status'] = "Not guilty"
-        
+        req.session.data['defendent-plea'] = "Not guilty"
         req.session.data['prosecutor'] = "TfL"
         req.session.data['notice-served'] = "4 March 2018"
         req.session.data['notice-served-short'] = "4 Mar 2018"
@@ -50,6 +50,8 @@ router.post('/', function (req, res) {
         req.session.data['defendent-home-telephone'] = ""
         req.session.data['defendent-mobile'] = "08771539837"
         req.session.data['defendent-nin'] = "BN 65 12 45 D"
+        
+        req.session.data['defendent-mitigation'] = "Fusce ultricies augue non felis iaculis vestibulum. Phasellus iaculis ut eros id semper. Praesent eget scelerisque leo, sit amet imperdiet dui. Morbi vestibulum condimentum pretium. Vivamus scelerisque auctor ex, at hendrerit erat dapibus eu."
 
         //Offence details
         req.session.data['offence-title'] = "Passenger used ticket issued for another person"
@@ -64,7 +66,7 @@ router.post('/', function (req, res) {
         
         // Case details tab
         req.session.data['case-status-2'] = "Not guilty"
-        
+        req.session.data['defendent-plea-2'] = "Not guilty"
         req.session.data['prosecutor-2'] = "TfL"
         req.session.data['notice-served-2'] = "28 February 2018"
         req.session.data['notice-served-short-2'] = "28 Feb 2018"
@@ -87,6 +89,8 @@ router.post('/', function (req, res) {
         req.session.data['defendent-mobile-2'] = "07766280294"
         req.session.data['defendent-nin-2'] = "AJ 54 36 22 B"
 
+        req.session.data['defendent-mitigation-2'] = "Fusce ultricies augue non felis iaculis vestibulum. Phasellus iaculis ut eros id semper. Praesent eget scelerisque leo, sit amet imperdiet dui. Morbi vestibulum condimentum pretium. Vivamus scelerisque auctor ex, at hendrerit erat dapibus eu."
+
         //Offence details
         req.session.data['offence-title-2'] = "Passenger used ticket issued for another person"
         req.session.data['offence-description-2'] = "On 10/06/2014 At grosvenor place SW1 Being a passenger on a Public Service Vehicle operated on behalf of London Bus Services Limited being used for the carriage of passengers at separate fares where the vehicle was being operated by a Driver without a Conductor did not immediately on boarding pay the fare to the Driver for the journey you intended to take."
@@ -105,6 +109,7 @@ router.post('/', function (req, res) {
         
         // Case details tab
         req.session.data['case-status'] = "Guilty plea"
+        req.session.data['defendent-plea'] = "Not guilty"
         req.session.data['prosecutor'] = "TV Licensing"
         req.session.data['notice-served'] = "4 March 2018"
         req.session.data['notice-served-short'] = "4 Mar 2018"
@@ -127,6 +132,8 @@ router.post('/', function (req, res) {
         req.session.data['defendent-mobile'] = "08771539837"
         req.session.data['defendent-nin'] = "BN 65 12 45 D"
 
+        req.session.data['defendent-mitigation'] = "Fusce ultricies augue non felis iaculis vestibulum. Phasellus iaculis ut eros id semper. Praesent eget scelerisque leo, sit amet imperdiet dui. Morbi vestibulum condimentum pretium. Vivamus scelerisque auctor ex, at hendrerit erat dapibus eu."
+
         //Offence details
         req.session.data['offence-title'] = "Possess/control TV set with intent another use install without a licence"
         req.session.data['offence-description'] = "On 01/11/2017 at Chelmsford in the county of Essex were in possession or control of a colour television receiver knowing, or having reasonable grounds for believing, that another person intended to install or use the receiver without a licence."
@@ -140,7 +147,8 @@ router.post('/', function (req, res) {
         
         // Case details tab
         req.session.data['case-status-2'] = "Not guilty"
-        
+        req.session.data['defendent-plea-2'] = "Not guilty"
+        req.session.data['defendent-plea-2'] = "Not guilty"
         req.session.data['prosecutor-2'] = "TV Licensing"
         req.session.data['notice-served-2'] = "28 February 2018"
         req.session.data['notice-served-short-2'] = "28 Feb 2018"
@@ -163,6 +171,8 @@ router.post('/', function (req, res) {
         req.session.data['defendent-mobile-2'] = "07766280294"
         req.session.data['defendent-nin-2'] = "AJ 54 36 22 B"
 
+        req.session.data['defendent-mitigation-2'] = "Fusce ultricies augue non felis iaculis vestibulum. Phasellus iaculis ut eros id semper. Praesent eget scelerisque leo, sit amet imperdiet dui. Morbi vestibulum condimentum pretium. Vivamus scelerisque auctor ex, at hendrerit erat dapibus eu."
+
         //Offence details
         req.session.data['offence-title-2'] = "Possess/control TV set with intent another use install without a licence"
         req.session.data['offence-description-2'] = "On 01/11/2017 at Chelmsford in the county of Essex were in possession or control of a colour television receiver knowing, or having reasonable grounds for believing, that another person intended to install or use the receiver without a licence."
@@ -175,9 +185,10 @@ router.post('/', function (req, res) {
         // *************
         //CASE DETAILS 1
         req.session.data['case-reference'] = "5160990"
-        
+
         // Case details tab
         req.session.data['case-status'] = "Guilty plea"
+        req.session.data['defendent-plea'] = "Not guilty"
         req.session.data['prosecutor'] = "DVLA"
         req.session.data['notice-served'] = "4 March 2018"
         req.session.data['notice-served-short'] = "4 Mar 2018"
@@ -200,6 +211,8 @@ router.post('/', function (req, res) {
         req.session.data['defendent-mobile'] = "08771539837"
         req.session.data['defendent-nin'] = "BN 65 12 45 D"
 
+        req.session.data['defendent-mitigation'] = "Fusce ultricies augue non felis iaculis vestibulum. Phasellus iaculis ut eros id semper. Praesent eget scelerisque leo, sit amet imperdiet dui. Morbi vestibulum condimentum pretium. Vivamus scelerisque auctor ex, at hendrerit erat dapibus eu."
+
         //Offence details
         req.session.data['offence-title'] = "Keep a vehicle without a vehicle license"
         req.session.data['offence-description'] = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatuR."
@@ -213,7 +226,7 @@ router.post('/', function (req, res) {
         
         // Case details tab
         req.session.data['case-status-2'] = "Not guilty"
-        
+        req.session.data['defendent-plea-2'] = "Not guilty"
         req.session.data['prosecutor-2'] = "DVLA"
         req.session.data['notice-served-2'] = "28 February 2018"
         req.session.data['notice-served-short-2'] = "28 Feb 2018"
@@ -235,6 +248,8 @@ router.post('/', function (req, res) {
         req.session.data['defendent-home-telephone-2'] = ""
         req.session.data['defendent-mobile-2'] = "07766280294"
         req.session.data['defendent-nin-2'] = "AJ 54 36 22 B"
+
+        req.session.data['defendent-mitigation-2'] = "Fusce ultricies augue non felis iaculis vestibulum. Phasellus iaculis ut eros id semper. Praesent eget scelerisque leo, sit amet imperdiet dui. Morbi vestibulum condimentum pretium. Vivamus scelerisque auctor ex, at hendrerit erat dapibus eu."
 
         //Offence details
         req.session.data['offence-title-2'] = "Keep a vehicle without a vehicle license"
@@ -347,6 +362,14 @@ router.post('/prosecutor/create-a-new-case-confirmation', function (req, res) {
 router.post('/prosecutor/withdraw-an-offence', function (req, res) {
 
     req.session.data['hasCaseBeenWithdrawn'] = "True"
+    
+    res.redirect('/prosecutor/case-details-page')
+    
+})
+
+// ******************************
+// Withdaw an offence
+router.post('/prosecutor/defendants-online-plea', function (req, res) {
     
     res.redirect('/prosecutor/case-details-page')
     

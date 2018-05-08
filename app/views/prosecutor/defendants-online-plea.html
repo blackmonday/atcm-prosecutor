@@ -1,0 +1,160 @@
+6{% extends "layout-CPP.html" %}
+
+{% block page_title %}
+    GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+<style>
+    table td {
+        border-bottom: none;
+        padding: 10px 0 0 0;
+    }
+</style>
+
+<script>
+    window.onload = function() {
+        
+        var dobMonth2 = document.getElementById('dobMonth2').innerText;
+        if (dobMonth2 == "1") {
+            document.getElementById('dobMonth2').innerText = "January";
+        } else if (dobMonth2 == "2") {
+            document.getElementById('dobMonth2').innerText = "February";
+        } else if (dobMonth2 == "3") {
+            document.getElementById('dobMonth2').innerText = "March";
+        } else if (dobMonth2 == "4") {
+            document.getElementById('dobMonth2').innerText = "April";
+        } else if (dobMonth2 == "5") {
+            document.getElementById('dobMonth2').innerText = "May";
+        } else if (dobMonth2 == "6") {
+            document.getElementById('dobMonth2').innerText = "June";
+        } else if (dobMonth2 == "7") {
+            document.getElementById('dobMonth2').innerText = "July";
+        } else if (dobMonth2 == "8") {
+            document.getElementById('dobMonth2').innerText = "August";
+        } else if (dobMonth2 == "9") {
+            document.getElementById('dobMonth2').innerText = "September";
+        } else if (dobMonth2 == "10") {
+            document.getElementById('dobMonth2').innerText = "October";
+        } else if (dobMonth2 == "11") {
+            document.getElementById('dobMonth2').innerText = "November";
+        } else if (dobMonth2 == "12") {
+            document.getElementById('dobMonth2').innerText = "December";
+        } 
+        
+    }
+</script>
+
+<main id="content" role="main">
+    
+    <div class="grid-row">
+        <div class="column-full">
+            <!-- Alpha phase banner -->
+            {% include "includes/phase_banner_alpha.html" %}
+            {% include "includes/breadcrumb_back.html" %}
+            
+            <div class="peristant-info-banner">
+                <div class="peristant-info-banner-content">{{data['case-reference']}} <span class="bold">{{data['defendent-first-name']}} {{data['defendent-last-name']}}</span></div>
+            </div>
+
+        </div>
+    </div>
+
+    <!--{% include "includes/display-decision.html" %}-->
+
+    <div class="grid-row top_30">
+        <div class="column-full">
+
+            <h1 class="heading-xlarge top_0 bottom_5">Defendant's online plea</h1>
+            <p>Submitted online on 28 January 2018 at 2:35pm</p>
+            
+            <table>
+                <caption class="heading-medium bottom_0">Defendant details</caption>
+                <tbody>
+                    <tr>
+                        <td style="width:50%">Name</td>
+                        <td>{{data['defendent-first-name']}} <span class="last-name">{{data['defendent-last-name']}}</span></td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align: top">Address</td>
+                        <td>
+                            {{data['defendent-address-line-1']}}<br>
+                            {{data['defendent-address-line-2']}}<br>
+                            {{data['defendent-address-town']}}<br>
+                            {{data['defendent-address-postcode']}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Home telephone</td>
+                        <td>&ndash;</td>
+                        <!--<td>{{data['defendent-home-telephone']}}</td>-->
+                    </tr>
+                    <tr>
+                        <td>Mobile</td>
+                        <td>{{data['defendent-mobile']}}</td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td>{{data['defendent-email']}}</td>
+                    </tr>
+                    <tr>
+                        <td>Date of birth</td>
+                        <td>{{data['defendent-dob']}} ({{data['defendent-age']}} years old)</td>
+                    </tr>
+                    <tr>
+                        <td>National Insurance number</td>
+                        <td>{{data['defendent-nin']}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <hr class="top_60 bottom_60">
+            
+            <table>
+                <caption class="heading-medium top_0 bottom_0">Plea</caption>
+                <tbody>
+                    <tr>
+                        <td style="width:50%">How they pleaded</td>
+                        <td>{{data['defendent-plea']}}</td>
+                    </tr>
+                    <tr>
+                        <td style="width:50%">How to complete case</td>
+                        <td>Online</td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align: top; width:50%">Information for magistrates (mitigation)</td>
+                        <td>{{data['defendent-mitigation']}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <hr class="top_60 bottom_15">
+
+        </div>
+    </div>
+    
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            
+            <h4 class="heading-medium">Note added</h4>
+            <p>No notes from the court have been added</p>
+            <!--<p>{{data['notes-added']}}</p>-->
+            
+        </div>
+    </div>
+    
+    <div class="grid-row">
+        <div class="column-full">
+
+            <form class="form" action="" method="post">
+                <input class="button top_30" type="submit" value="Back">
+            </form>
+
+        </div>
+
+    </div>
+    
+</main>
+
+{% endblock %}
