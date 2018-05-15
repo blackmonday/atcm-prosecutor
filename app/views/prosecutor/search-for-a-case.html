@@ -60,9 +60,9 @@
                 <thead>
                     <tr>
                         <th scope="col" style="width:175px">Name</th>
-                        <th scope="col">Reference</th>
-                        <th scope="col">Date of birth</th>
+                        <th scope="col">Case reference number</th>
                         <th scope="col">Case status</th>
+                        <th scope="col">Date of birth</th>
                         <th scope="col">Notice served</th>
                     </tr>
                 </thead>
@@ -70,8 +70,8 @@
                     <tr>
                         <th scope="row"><img src="/public/images/alert-icon-black.svg" class="warning-banner-icon" style="margin-right:5px"><a href="case-details-page.html">{{data['defendent-last-name']}} {{data['defendent-first-name']}}</a></th>
                         <td>{{data['case-reference']}}</td>
-                        <td>{{data['defendent-dob-short']}}</td>
                         <td>{{data['case-status']}}</td>
+                        <td>{{data['defendent-dob-short']}}</td>
                         <td>{{data['notice-served']}}</td>
                     </tr>
                 </tbody>

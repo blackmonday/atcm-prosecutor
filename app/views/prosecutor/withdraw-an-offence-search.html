@@ -92,9 +92,9 @@
                 <thead>
                     <tr>
                         <th scope="col">Name</th>
-                        <th scope="col">Reference number</th>
-                        <th scope="col">Date of birth</th>
+                        <th scope="col">Case reference number</th>
                         <th scope="col">Case status</th>
+                        <th scope="col">Date of birth</th>
                         <th scope="col">Notice served</th>
                     </tr>
                 </thead>
@@ -102,8 +102,8 @@
                     <tr>
                         <th scope="row"><a href="case-details-page.html">{{data['defendent-last-name']}} {{data['defendent-first-name']}}</a></th>
                         <td>{{data['case-reference']}}</td>
-                        <td>{{data['defendent-dob-short']}}</td>
                         <td>{{data['case-status']}}</td>
+                        <td>{{data['defendent-dob-short']}}</td>
                         <td>{{data['notice-served']}}</td>
                     </tr>
                 </tbody>

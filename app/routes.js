@@ -99,7 +99,8 @@ router.post('/', function (req, res) {
         req.session.data['new-case-offence-wording-2'] = "You have been charged with the following offence: That you, on 24 March 2018 at HIGH STREET, W3 Being a passenger on a Public Service Vehicle operated on behalf of London Bus Services Limited being used for the carriage of passengers at separate fares, did use in relation to the journey you were taking a ticket which had been issued for use by another person on terms that it is not transferable. Contrary to Regulation 7(1)(b) of the Public Service Vehicles (conduct of Drivers, Inspectors, Conductors & Passengers) Regulations 1990 SI No. 1020 and contrary to Section 25(3) of the Public Passenger Vehicles Act 1981."
         
         //res.redirect('/prosecutor/case-details-page')
-        res.redirect('/prosecutor/dashboard')
+        //res.redirect('/prosecutor/dashboard')
+        res.redirect('/prosecutor/sign-in')
         
     } else if (prosecutor == "TV Licensing") {
         
@@ -178,7 +179,8 @@ router.post('/', function (req, res) {
         req.session.data['offence-description-2'] = "On 01/11/2017 at Chelmsford in the county of Essex were in possession or control of a colour television receiver knowing, or having reasonable grounds for believing, that another person intended to install or use the receiver without a licence."
         req.session.data['statement-of-facts-2'] = "I, Inspector Morse, was suspicious as the defendant kept moving seats away from me. When asked for a ticket he replied “I don’t have one as I am not really on this train, you’re seeing an illusion”. I had no choice but to issue him with a ticket."
         
-        res.redirect('/prosecutor/dashboard')
+        //res.redirect('/prosecutor/dashboard')
+        res.redirect('/prosecutor/sign-in')
                 
     } else if (prosecutor == "DVLA") {
         
@@ -256,7 +258,8 @@ router.post('/', function (req, res) {
         req.session.data['offence-description-2'] = "On 01/11/2017 at Chelmsford in the county of Essex were in possession or control of a colour television receiver knowing, or having reasonable grounds for believing, that another person intended to install or use the receiver without a licence."
         req.session.data['statement-of-facts-2'] = "I, Inspector Morse, was suspicious as the defendant kept moving seats away from me. When asked for a ticket he replied “I don’t have one as I am not really on this train, you’re seeing an illusion”. I had no choice but to issue him with a ticket."
         
-        res.redirect('/prosecutor/dashboard')
+        //res.redirect('/prosecutor/dashboard')
+        res.redirect('/prosecutor/sign-in')
         
     }
         
@@ -380,5 +383,31 @@ router.post('/prosecutor/defendants-online-plea', function (req, res) {
 router.post('/prosecutor/defendants-online-plea-2', function (req, res) {
     
     res.redirect('/prosecutor/case-details-page-2')
+    
+})
+
+// *******
+// SIGN IN
+router.post('/prosecutor/sign-in', function (req, res) {
+    
+    res.redirect('/prosecutor/sign-in-authentication')
+    
+})
+
+
+// ************************
+// SIGN IN - AUTHENTICATION
+router.post('/prosecutor/sign-in-authentication', function (req, res) {
+    
+    res.redirect('/prosecutor/dashboard')
+    
+})
+
+
+// ********
+// SIGN OUT
+router.post('/prosecutor/sign-out', function (req, res) {
+    
+    res.redirect('http://gov.uk')
     
 })
