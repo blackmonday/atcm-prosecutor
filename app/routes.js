@@ -40,7 +40,8 @@ router.post('/', function (req, res) {
         req.session.data['defendent-last-name'] = "JONES"
         req.session.data['defendent-dob'] = "4 January 1968"
         req.session.data['defendent-dob-short'] = "4 Jan 1968"
-        req.session.data['defendent-age'] = "50"
+        req.session.data['defendent-dob-year'] = "1968"
+        req.session.data['defendent-age'] = 2018-req.session.data['defendent-dob-year']
         req.session.data['defendent-address-line-1'] = "307A Seven Sisters Rd"
         req.session.data['defendent-address-line-2'] = "Harringay"
         req.session.data['defendent-address-line-3'] = ""
@@ -78,7 +79,8 @@ router.post('/', function (req, res) {
         req.session.data['defendent-last-name-2'] = "HAMMOND"
         req.session.data['defendent-dob-2'] = "17 August 1974"
         req.session.data['defendent-dob-short-2'] = "17 Aug 1974"
-        req.session.data['defendent-age-2'] = "44"
+        req.session.data['defendent-dob-year-2'] = "1974"
+        req.session.data['defendent-age-2'] = 2018-req.session.data['defendent-dob-year-2']
         req.session.data['defendent-address-line-1-2'] = "46 Milton Grove"
         req.session.data['defendent-address-line-2-2'] = "Stoke Newington"
         req.session.data['defendent-address-line-3-2'] = ""
@@ -122,7 +124,8 @@ router.post('/', function (req, res) {
         req.session.data['defendent-last-name'] = "JONES"
         req.session.data['defendent-dob'] = "4 January 1968"
         req.session.data['defendent-dob-short'] = "4 Jan 1968"
-        req.session.data['defendent-age'] = "50"
+        req.session.data['defendent-dob-year'] = "1968"
+        req.session.data['defendent-age'] = 2018-req.session.data['defendent-dob-year']
         req.session.data['defendent-address-line-1'] = "307A Seven Sisters Rd"
         req.session.data['defendent-address-line-2'] = "Harringay"
         req.session.data['defendent-address-line-3'] = ""
@@ -161,7 +164,8 @@ router.post('/', function (req, res) {
         req.session.data['defendent-last-name-2'] = "HAMMOND"
         req.session.data['defendent-dob-2'] = "17 August 1974"
         req.session.data['defendent-dob-short-2'] = "17 Aug 1974"
-        req.session.data['defendent-age-2'] = "44"
+        req.session.data['defendent-dob-year-2'] = "1974"
+        req.session.data['defendent-age-2'] = 2018-req.session.data['defendent-dob-year-2']
         req.session.data['defendent-address-line-1-2'] = "46 Milton Grove"
         req.session.data['defendent-address-line-2-2'] = "Stoke Newington"
         req.session.data['defendent-address-line-3-2'] = ""
@@ -202,7 +206,8 @@ router.post('/', function (req, res) {
         req.session.data['defendent-last-name'] = "JONES"
         req.session.data['defendent-dob'] = "4 January 1968"
         req.session.data['defendent-dob-short'] = "4 Jan 1968"
-        req.session.data['defendent-age'] = "50"
+        req.session.data['defendent-dob-year'] = "1968"
+        req.session.data['defendent-age'] = 2018-req.session.data['defendent-dob-year']
         req.session.data['defendent-address-line-1'] = "307A Seven Sisters Rd"
         req.session.data['defendent-address-line-2'] = "Harringay"
         req.session.data['defendent-address-line-3'] = ""
@@ -240,7 +245,8 @@ router.post('/', function (req, res) {
         req.session.data['defendent-last-name-2'] = "HAMMOND"
         req.session.data['defendent-dob-2'] = "17 August 1974"
         req.session.data['defendent-dob-short-2'] = "17 Aug 1974"
-        req.session.data['defendent-age-2'] = "44"
+        req.session.data['defendent-dob-year-2'] = "1974"
+        req.session.data['defendent-age-2'] = 2018-req.session.data['defendent-dob-year-2']
         req.session.data['defendent-address-line-1-2'] = "46 Milton Grove"
         req.session.data['defendent-address-line-2-2'] = "Stoke Newington"
         req.session.data['defendent-address-line-3-2'] = ""
