@@ -313,6 +313,14 @@ router.post('/prosecutor/dates-to-avoid-2', function (req, res) {
     
 })
 
+// ***********************
+// Change dates to avoid 2
+router.post('/prosecutor/change-dates-to-avoid-2', function (req, res) {
+
+    res.redirect('/prosecutor/change-dates-to-avoid-confirmation-2')
+    
+})
+
 // *****************************
 // Dates to avoid - confirmation
 router.post('/prosecutor/dates-to-avoid-confirmation', function (req, res) {
@@ -331,6 +339,14 @@ router.post('/prosecutor/dates-to-avoid-confirmation-2', function (req, res) {
 
     //res.redirect('/prosecutor/case-details-page')
     res.redirect('/prosecutor/add-dates-to-avoid')
+    
+})
+
+// *****************************
+// Dates to avoid - confirmation 2
+router.post('/prosecutor/change-dates-to-avoid-confirmation-2', function (req, res) {
+
+    res.redirect('/prosecutor/case-details-page')
     
 })
 

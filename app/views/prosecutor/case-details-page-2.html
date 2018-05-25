@@ -34,15 +34,12 @@
 
 <main id="content" role="main">
     
-    <div class="grid-row" id="detailsChanged" style="display:none">
+    <div class="grid-row" id="detailsChanged">
         <div class="column-full">
             <!-- Alpha phase banner -->
             {% include "includes/phase_banner_alpha.html" %}
             {% include "includes/breadcrumb_back.html" %}
-            
-            <div class="peristant-info-banner">
-                <div class="peristant-info-banner-content">{{data['case-reference-2']}} <span class="bold">{{data['defendent-first-name-2']}} {{data['defendent-last-name-2']}}</span></div>
-            </div>
+            {% include "includes/persist-info-banner-2.html" %}
         </div>
     </div>
 

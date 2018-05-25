@@ -37,6 +37,19 @@
             document.getElementById('withdrawOfficeLink').style.display = "none";
         }
 
+        
+        
+
+        var datesToAvoidTD = document.getElementById('datesToAvoidTD').innerText;
+        if (datesToAvoidTD == "") {
+            document.getElementById('addDatesToAvoidLink').style.display = "block";
+            document.getElementById('changeDatesToAvoidLink').style.display = "none";
+        } else if (datesToAvoidTD != "") {
+            document.getElementById('addDatesToAvoidLink').style.display = "none";
+            document.getElementById('changeDatesToAvoidLink').style.display = "block";
+        }
+        
+        
     }
 </script>
 
@@ -47,13 +60,8 @@
             <!-- Alpha phase banner -->
             {% include "includes/phase_banner_alpha.html" %}
             {% include "includes/breadcrumb_back.html" %}
-            
-            <div class="peristant-info-banner">
-                <div class="peristant-info-banner-content">{{data['case-reference']}} <span class="bold">{{data['defendent-first-name']}} {{data['defendent-last-name']}}</span></div>
-            </div>
-            
-            
-            
+            {% include "includes/persist-info-banner.html" %}
+                        
             <div id="caseWithdrawn" class="confirmation-banner" style="display: none">
                 <div class="confirmation-banner-tick">
                     <img src="/public/images/confirmation-banner-tick-icon.png">
@@ -211,6 +219,7 @@
                 <h3 class="heading-medium">Case options</h3>
                 <p id="withdrawOfficeLink"><a href="withdraw-an-offence.html">Withdraw offence</a></p>
                 <p id="addDatesToAvoidLink"><a href="dates-to-avoid-2.html">Add dates to avoid</a></p>
+                <p id="changeDatesToAvoidLink"><a href="change-dates-to-avoid-2.html">Change dates to avoid</a></p>
                 <p id="progressCaseLink"><a href="progress-case.html">Progress case</a></p>
             </div>
             

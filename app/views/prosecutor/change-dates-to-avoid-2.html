@@ -1,0 +1,59 @@
+{% extends "layout-CPP.html" %}
+
+{% block page_title %}
+    GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+<style>
+    tr {
+        vertical-align: top;
+    }
+</style>
+
+<script>
+    window.onload = function() {
+    }
+</script>
+
+<main id="content" role="main">
+    
+    <div class="grid-row">
+        <div class="column-full">
+            <!-- Alpha phase banner -->
+            {% include "includes/phase_banner_alpha.html" %}
+            {% include "includes/breadcrumb_back.html" %}
+        </div>
+    </div>
+
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            <h1 class="heading-xlarge top_30 bottom_30">Change dates to avoid</h1>
+         </div>
+    </div>
+
+    <div class="grid-row">
+        <div class="column-two-thirds">
+
+            <form class="form" action="" method="post">
+                <div class="form-group">
+                    
+                    <fieldset>
+                        <label class="form-label" for="textarea">Enter dates this case shouldn't be listed or write 'none'.</label>
+                        <textarea class="form-control form-control-3-4" name="dates-to-avoid" id="dates-to-avoid" rows="5" style="white-space: pre-wrap">{{data['dates-to-avoid']}}</textarea>
+                    </fieldset>
+                    
+                    
+                    <p class="top_30"><input class="button" type="submit" value="Continue"></p>
+                    <p class="top_15"><a href="javascript:history.go(-1);">Cancel</a></p>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</main>
+
+{% endblock %}
+
+
