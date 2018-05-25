@@ -19,6 +19,8 @@ router.post('/', function (req, res) {
     req.session.data['addDatesToAvoidCount'] = "2"
     req.session.data['defendantDetailsUpdated'] = "2"
     req.session.data['whichPage'] = "Not yet specified"
+    
+    req.session.data['comingFrom'] = ""
 
     if (prosecutor == "TfL") {
         
@@ -308,7 +310,7 @@ router.post('/prosecutor/dates-to-avoid', function (req, res) {
 // **************
 // Dates to avoid 2
 router.post('/prosecutor/dates-to-avoid-2', function (req, res) {
-
+    
     res.redirect('/prosecutor/dates-to-avoid-confirmation-2')
     
 })
@@ -331,20 +333,31 @@ router.post('/prosecutor/dates-to-avoid-confirmation', function (req, res) {
     
 })
 
-// *****************************
+// *******************************
 // Dates to avoid - confirmation 2
 router.post('/prosecutor/dates-to-avoid-confirmation-2', function (req, res) {
 
     req.session.data['addDatesToAvoidCount'] = req.session.data['addDatesToAvoidCount']-1
-
-    //res.redirect('/prosecutor/case-details-page')
-    res.redirect('/prosecutor/add-dates-to-avoid')
+    
+    if (req.session.data['comingFrom'] == 'review') {
+        res.redirect('/prosecutor/add-dates-to-avoid')
+    } else {
+        res.redirect('/prosecutor/case-details-page')
+    }
     
 })
 
-// *****************************
+// *******************************
 // Dates to avoid - confirmation 2
 router.post('/prosecutor/change-dates-to-avoid-confirmation-2', function (req, res) {
+
+    res.redirect('/prosecutor/case-details-page')
+    
+})
+
+// *************
+// Progress case
+router.post('/prosecutor/progress-case', function (req, res) {
 
     res.redirect('/prosecutor/case-details-page')
     

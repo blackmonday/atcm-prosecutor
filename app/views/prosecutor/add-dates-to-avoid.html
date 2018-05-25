@@ -59,9 +59,9 @@
         //addressLine3_2
         //addressTown_2
         //addressPostcode_2
-        
+
     }
-     
+    
 </script>
 
 <main id="content" role="main">
@@ -76,6 +76,14 @@
 
     <div class="grid-row">
         <div class="column-two-thirds">
+            
+            
+            
+            {% include "includes/coming-from.html" %}
+
+
+            
+            
             <h1 class="heading-xlarge top_30 bottom_30">Review not guilty pleas (<span id="datesToAvoidCount">{{data['addDatesToAvoidCount']}}</span> <span id="caseText">cases</span>)</h1>
             
             <div class="notice top_60 bottom_60">
@@ -114,7 +122,7 @@
 
                     <tr id="addDatesToAvoidRow2">
                         <!--<th scope="row"><a href="case-details-page.html" onclick="whichPage()">{{data['defendent-last-name']}} {{data['defendent-first-name']}}</a></th>-->
-                        <th scope="row"><a href="case-details-page.html">{{data['defendent-last-name']}} {{data['defendent-first-name']}}</a></th>
+                        <th scope="row"><a href="case-details-page.html?comingFrom=review">{{data['defendent-last-name']}} {{data['defendent-first-name']}}</a></th>
                         <td><span id="addressLine1">{{data['defendent-address-line-1']}}, </span><span id="addressLine2">{{data['defendent-address-line-2']}}, </span><span id="addressLine3">{{data['defendent-address-line-3']}}, </span><span id="addressTown">{{data['defendent-address-town-or-city']}}, </span><span id="addressPostcode">{{data['defendent-address-postcode']}}</span></td>
                         <td>{{data['case-reference']}}</td>
                         <td>{{data['defendent-dob-short']}}</td>
@@ -133,7 +141,7 @@
                 </tbody>
             </table>
 
-            <p class="top_30"><a href="dashboard.html">Back to dashboard</a></p>
+            <p class="top_30"><a href="dashboard.html?comingFrom=">Back to dashboard</a></p>
 
         </div>
     </div>
