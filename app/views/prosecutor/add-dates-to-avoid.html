@@ -64,6 +64,8 @@
     
 </script>
 
+{% include "includes/timeout-overlay.html" %}
+
 <main id="content" role="main">
     
     <div class="grid-row">
@@ -77,12 +79,7 @@
     <div class="grid-row">
         <div class="column-two-thirds">
             
-            
-            
             {% include "includes/coming-from.html" %}
-
-
-            
             
             <h1 class="heading-xlarge top_30 bottom_30">Review not guilty pleas (<span id="datesToAvoidCount">{{data['addDatesToAvoidCount']}}</span> <span id="caseText">cases</span>)</h1>
             
